@@ -47,30 +47,30 @@ import org.springframework.scheduling.annotation.Async;
 public class TechMutation extends SimpleItemContainerMachine implements Radioactive {
 
   public static final SlimefunItemStack TECH_MUTATION_I = new SupremeItemStack("SUPREME_TECH_MUTATION_I",
-      Material.SLIME_BLOCK, "&bTech Mutation", "", "&fUse generator mutation ", "&fto progress to higher levels", "",
+      Material.SLIME_BLOCK, "&b转变机", "", "f使用生成器转换 ", "&f向更高品质进步", "",
       LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), UtilEnergy.energyPowerPerSecond(500), "",
-      "&3Supreme Machine");
+      "&3至尊机器");
   public static final ItemStack[] RECIPE_TECH_MUTATION_I = {SupremeComponents.INDUCTIVE_MACHINE,
       SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.REINFORCED_PLATE,
       SlimefunItems.NUCLEAR_REACTOR, SlimefunItems.REINFORCED_PLATE, SupremeComponents.RUSTLESS_MACHINE,
       SupremeCore.CORE_OF_DEATH, SupremeComponents.RUSTLESS_MACHINE};
 
   public static final SlimefunItemStack TECH_MUTATION_II = new SupremeItemStack("SUPREME_TECH_MUTATION_II",
-      Material.SLIME_BLOCK, "&bTech Mutation II", "", "&fUse generator mutation ", "&fto progress to higher levels", "",
-      "&fChance factor multiplied by 2x", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
+      Material.SLIME_BLOCK, "&b转变机II", "", "&f使用生成器转换 ", "&f向更高品质进步", "",
+      "&f机会数量翻倍2x", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), UtilEnergy.energyPowerPerSecond(500), "",
-      "&3Supreme Machine");
+      "&3至尊机器");
   public static final ItemStack[] RECIPE_TECH_MUTATION_II = new ItemStack[]{SupremeComponents.CONVEYANCE_MACHINE,
       SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
       TechMutation.TECH_MUTATION_I, SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.THORNERITE,
       SupremeCetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack TECH_MUTATION_III = new SupremeItemStack("SUPREME_TECH_MUTATION_III",
-      Material.SLIME_BLOCK, "&bTech Mutation III", "", "&fUse generator mutation ", "&fto progress to higher levels",
-      "", "&fChance factor multiplied by 4x", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
+      Material.SLIME_BLOCK, "&b转变机III", "", "&f使用生成器转换 ", "&f向更高品质进步",
+      "", "&f机会数量翻倍4x", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), UtilEnergy.energyPowerPerSecond(500), "",
-      "&3Supreme Machine");
+      "&3至尊机器");
   public static final ItemStack[] RECIPE_TECH_MUTATION_III = new ItemStack[]{SupremeComponents.THORNERITE,
       SupremeAttribute.getImpetus(), SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
       TechMutation.TECH_MUTATION_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
@@ -198,7 +198,7 @@ public class TechMutation extends SimpleItemContainerMachine implements Radioact
 
       } else {
 
-        invalidProgressBar(inv, "&cTechMutation de receita não identificados");
+        invalidProgressBar(inv, "&c科技化不明收入");
 
       }
 
@@ -254,10 +254,10 @@ public class TechMutation extends SimpleItemContainerMachine implements Radioact
               Math.round(ticksTotal / this.getSpeed()), result);
         }
       } else {
-        invalidProgressBar(inv, "&cSem energia para maquina");
+        invalidProgressBar(inv, "&c机器没电");
       }
     } else {
-      invalidProgressBar(inv, "&cFalha no tempo da maquina");
+      invalidProgressBar(inv, "&c机器时间故障");
     }
   }
 

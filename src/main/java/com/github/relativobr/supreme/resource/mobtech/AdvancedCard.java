@@ -16,158 +16,158 @@ public class AdvancedCard {
    */
 
   public static final SlimefunItemStack CARD_SOLDER_INGOT = new SupremeItemStack("SUPREME_CARD_SOLDER",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Solder Ingot", "", "&fChange to Production Solder Ingot", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b焊锭卡片", "", "&f改为生产焊锭", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_BILLON_INGOT = new SupremeItemStack("SUPREME_CARD_BILLON",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Billon Ingot", "", "&fChange to Production Billon Ingot", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b十亿锭卡片", "", "&f改为生产十亿锭", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_BRONZE_INGOT = new SupremeItemStack("SUPREME_CARD_BRONZE",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Bronze Ingot", "", "&fChange to Production Bronze Ingot", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b青铜锭卡片", "", "&f改为生产青铜锭", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_BRASS_INGOT = new SupremeItemStack("SUPREME_CARD_BRASS",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Brass Ingot", "", "&fChange to Production Brass Ingot", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b黄铜锭卡片", "", "&f改为生产黄铜", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_SULFATE = new SupremeItemStack("SUPREME_CARD_SULFATE",
-      Material.MUSIC_DISC_BLOCKS, "&bCard de Sulfate", "", "&fChange to Production Sulfate", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b硫酸盐卡片", "", "&f改为生产硫酸盐", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_CARBON = new SupremeItemStack("SUPREME_CARD_CARBON",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Carbon", "", "&fChange to Production Carbon", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b碳卡片", "", "&f改为生产碳", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_SILICON = new SupremeItemStack("SUPREME_CARD_SILICON",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Silicon", "", "&fChange to Production Silicon", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b硅卡片", "", "&f改为生产Silicon", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_STEEL = new SupremeItemStack("SUPREME_CARD_STEEL",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Steel", "", "&fChange to Production Steel", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b钢卡片", "", "&f改为生产钢", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_NICKEL = new SupremeItemStack("SUPREME_CARD_NICKEL",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Nickel", "", "&fChange to Production Nickel", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b镍卡片", "", "&f改为生产镍", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_FERROSILICON = new SupremeItemStack("SUPREME_CARD_FERROSILICON",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Ferrosilicon", "", "&fChange to Production Ferrosilicon", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b硅铁卡片", "", "&f改为生产硅铁", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_DAMASCUS = new SupremeItemStack("SUPREME_CARD_DAMASCUS",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Damascus", "", "&fChange to Production Damascus", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b大马士革钢卡片", "", "&f改为生产大马士革钢", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_COBALT = new SupremeItemStack("SUPREME_CARD_COBALT",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Cobalt", "", "&fChange to Production Cobalt", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b钴卡片", "", "&f改为生产钴", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_DURALUMIN_INGOT = new SupremeItemStack("SUPREME_CARD_DURALUMIN",
-      Material.MUSIC_DISC_BLOCKS, "&bCard Machine Duralumin Ingot", "", "&fChange to Production Duralumin Ingot", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_BLOCKS, "&b硬铝锭卡片", "", "&f改为生产硬铝", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_ALUMINUM_BRONZE_INGOT = new SupremeItemStack(
-      "SUPREME_CARD_ALUMINUM_BRONZE", Material.MUSIC_DISC_CHIRP, "&bCard Machine Aluminum Bronze Ingot", "",
-      "&fChange to Production Aluminum Bronze Ingot", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      "SUPREME_CARD_ALUMINUM_BRONZE", Material.MUSIC_DISC_CHIRP, "&b铝青铜锭卡片", "",
+      "&f改为生产铝青铜锭", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_ALUMINUM_BRASS_INGOT = new SupremeItemStack("SUPREME_CARD_ALUMINUM_BRASS",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Aluminum Brass Ingot", "",
-      "&fAltera para Aluminum Produção de Brass Ingot", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b铝黄铜锭卡片", "",
+      "&f改为生产铝黄铜锭", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_CORINTHIAN_BRONZE_INGOT = new SupremeItemStack(
-      "SUPREME_CARD_CORINTHIAN_BRONZE", Material.MUSIC_DISC_CHIRP, "&bCard Machine Corinthian Bronze Ingot", "",
-      "&fChange to Production Corinthian Bronze Ingot", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      "SUPREME_CARD_CORINTHIAN_BRONZE", Material.MUSIC_DISC_CHIRP, "&b科林斯青铜锭卡片", "",
+      "&f改为生产科林斯青铜锭", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_GOLD24K = new SupremeItemStack("SUPREME_CARD_GOLD24K",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Gold 24k", "", "&fChange to Production Ouro 24k", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b24k金锭卡片", "", "&f改为生产24k金锭", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_CARBON_PRESS = new SupremeItemStack("SUPREME_CARD_CARBON_PRESS",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Compressed Carbon", "", "&fChange to Production Compressed Carbon", "",
-      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b压缩碳卡片", "", "&f改为生产压缩碳", "",
+      LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_HARDENED_METAL_INGOT = new SupremeItemStack("SUPREME_CARD_HARDENED_METAL",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Hardened Metal Ingot", "",
-      "&fChange to Production Hardened Metal Ingot", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
-      "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b硬化金属卡片", "",
+      "&f改为生产硬化金属", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
+      "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_REDSTONE_ALLOY = new SupremeItemStack("SUPREME_CARD_REDSTONE_ALLOY",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Redstone Alloy", "", "&fChange to Production Redstone Alloy", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b红石合金卡片", "", "&f改为生产红石合金", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_PLASTIC_SHEET = new SupremeItemStack("SUPREME_CARD_PLASTIC_SHEET",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Plastic Sheet", "", "&fChange to Production Plastic Sheet", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b塑料纸卡片", "", "&f改为生产塑料纸", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_BATTERY = new SupremeItemStack("SUPREME_CARD_BATTERY",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Battery", "", "&fChange to Production Battery", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b电池卡片", "", "&f改为生产电池", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_MAGNET = new SupremeItemStack("SUPREME_CARD_MAGNET",
-      Material.MUSIC_DISC_CHIRP, "&bCard Machine Magnet", "", "&fChange to Production Magnet", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_CHIRP, "&b磁铁卡片", "", "&f改为生产磁铁", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_ELECTRO_MAGNET = new SupremeItemStack("SUPREME_CARD_ELECTRO_MAGNET",
-      Material.MUSIC_DISC_MALL, "&bCard Machine Electro Magnet", "", "&fChange to Production Electro Magnet", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_MALL, "&b电磁铁卡片", "", "&f改为生产电磁铁", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_ELECTRIC_MOTOR = new SupremeItemStack("SUPREME_CARD_ELECTRIC_MOTOR",
-      Material.MUSIC_DISC_MALL, "&bCard Machine Electric Motor", "", "&fChange to Production Electric Motor", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_MALL, "&b电动马达卡片", "", "&f改为生产电动马达", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_HEATING_COIL = new SupremeItemStack("SUPREME_CARD_HEATING_COIL",
-      Material.MUSIC_DISC_MALL, "&bCard Machine Heating Coil", "", "&fChange to Production Heating Coil", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_MALL, "&b加热线圈卡片", "", "&f改为生产加热线圈", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_SYNTHETIC_SAPPHIRE = new SupremeItemStack(
-      "SUPREME_CARD_SYNTHETIC_SAPPHIRE", Material.MUSIC_DISC_MALL, "&bCard Machine Synthetic Sapphire", "",
-      "&fChange to Production Synthetic Sapphire", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
-      "", "&3Supreme Component");
+      "SUPREME_CARD_SYNTHETIC_SAPPHIRE", Material.MUSIC_DISC_MALL, "&b人造蓝宝石卡片", "",
+      "&f改为生产人造蓝宝石", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
+      "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_SYNTHETIC_EMERALD = new SupremeItemStack("SUPREME_CARD_SYNTHETIC_EMERALD",
-      Material.MUSIC_DISC_MALL, "&bCard Machine Synthetic Emerald", "", "&fChange to Production Synthetic Emerald", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_MALL, "&b人造绿宝石卡片", "", "&f改为生产人造绿宝石", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_SYNTHETIC_DIAMOND = new SupremeItemStack("SUPREME_CARD_SYNTHETIC_DIAMOND",
-      Material.MUSIC_DISC_MALL, "&bCard Machine Synthetic Diamond", "", "&fChange to Production Synthetic Diamond", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_MALL, "&b人造钻石卡片", "", "&f改为生产人造钻石", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_CARBONADO = new SupremeItemStack("SUPREME_CARD_CARBONADO",
-      Material.MUSIC_DISC_STAL, "&bCard Machine Carbonado", "", "&fChange to Production Carbonado", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      Material.MUSIC_DISC_STAL, "&b黑金刚石卡片", "", "&f改为生产黑金刚石", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
   public static final SlimefunItemStack CARD_REINFORCED_ALLOY_INGOT = new SupremeItemStack(
-      "SUPREME_CARD_REINFORCED_ALLOY", Material.MUSIC_DISC_STAL, "&bCard Machine Reinforced Alloy Ingot", "",
-      "&fChange to Production Reinforced Alloy Ingot", "",
-      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
+      "SUPREME_CARD_REINFORCED_ALLOY", Material.MUSIC_DISC_STAL, "&b强化合金锭卡片", "",
+      "&f改为生产强化合金锭", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
 
 }

@@ -27,8 +27,8 @@ import org.bukkit.inventory.ItemStack;
 public class MultiBlockMagicalFabricator extends MultiBlockMachine implements NotPlaceable {
 
   public static final SlimefunItemStack MAGICAL_FABRICATOR = new SupremeItemStack("SUPREME_MULTIBLOCK_MAGICAL",
-      Material.CRYING_OBSIDIAN, "&eMagical Fabricator", "", "&7&oYou can craft magical here!", "",
-      "&aMultiBlock Machine");
+      Material.CRYING_OBSIDIAN, "&e魔法工厂", "", "&7&o你可以在这里制造魔法物品!", "",
+      "&a多方块机器");
   public static final RecipeType MACHINE_MAGICAL_FABRICATOR = new RecipeType(
       new NamespacedKey(Supreme.inst(), "SUPREME_MULTIBLOCK_MAGICAL_KEY"), MAGICAL_FABRICATOR);
 

@@ -184,29 +184,29 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     switch (mobTechType) {
       case MUTATION_BERSERK:
       case ROBOTIC_ACCELERATION:
-        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x " + ChatColor.GRAY
-            + "increase speed and increase energy";
+        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x" + ChatColor.GRAY
+            + "提升速度且提升能量";
       case MUTATION_LUCK:
       case ROBOTIC_CLONING:
         return buildLoreTypeLuckAndCloning(tier);
       case MUTATION_INTELLIGENCE:
       case ROBOTIC_EFFICIENCY:
-        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x " + ChatColor.GRAY + " decrease energy";
+        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x" + ChatColor.GRAY + "减少能量";
       case SIMPLE:
       default:
-        return ChatColor.GRAY + "Increases processing speed";
+        return ChatColor.GRAY + "提升进程速度";
     }
   }
 
   private static String buildLoreTypeLuckAndCloning(Integer tier) {
     if (tier >= 8) {
-      return ChatColor.YELLOW + "5x " + ChatColor.GRAY + "Stack clone";
+      return ChatColor.YELLOW + "5x" + ChatColor.GRAY + "堆栈克隆";
     } else if (tier >= 6) {
-      return ChatColor.YELLOW + "4x " + ChatColor.GRAY + "Stack clone";
+      return ChatColor.YELLOW + "4x" + ChatColor.GRAY + "堆栈克隆";
     } else if (tier >= 4) {
-      return ChatColor.YELLOW + "3x " + ChatColor.GRAY + "Stack clone";
+      return ChatColor.YELLOW + "3x" + ChatColor.GRAY + "堆栈克隆";
     } else {
-      return ChatColor.YELLOW + "2x " + ChatColor.GRAY + "Stack clone";
+      return ChatColor.YELLOW + "2x" + ChatColor.GRAY + "堆栈克隆";
     }
   }
 
@@ -214,19 +214,19 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     switch (mobTechType) {
       case MUTATION_BERSERK:
       case ROBOTIC_ACCELERATION:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x amount stack / 32) speed " + ChatColor.GRAY
-            + " value process";
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x堆栈数/32)速度" + ChatColor.GRAY
+            + "进程值";
       case MUTATION_INTELLIGENCE:
       case ROBOTIC_EFFICIENCY:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + " amount stack) J/s " + ChatColor.GRAY
-            + " value process";
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "堆栈数)J/s " + ChatColor.GRAY
+            + "进程值";
       case MUTATION_LUCK:
       case ROBOTIC_CLONING:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x amount stack)" + ChatColor.GRAY
-            + " value process (limit 64x)";
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x堆栈数)" + ChatColor.GRAY
+            + "进程值(限制64x)";
       case SIMPLE:
       default:
-        return ChatColor.YELLOW + "1x amount stack" + ChatColor.GRAY + " value process";
+        return ChatColor.YELLOW + "1x堆栈数" + ChatColor.GRAY + "进程值";
     }
   }
 
@@ -234,7 +234,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     return new SlimefunItemStack(buildIdTier(MobTechGeneric.getId(), tier), MobTechGeneric.getTexture(),
         buildNameTier(MobTechGeneric.getName(), tier), "", buildLoreRadioactivityType(MobTechGeneric.getMobTechType()),
         buildLoreType(MobTechGeneric.getMobTechType(), tier),
-        buildLoreTypeAmount(MobTechGeneric.getMobTechType(), tier), "", "&3Supreme Component");
+        buildLoreTypeAmount(MobTechGeneric.getMobTechType(), tier), "", "&3至尊合成材料");
   }
 
   public static AbstractQuarryOutput getOutputQuarry(@Nonnull SlimefunItemStack item) {
@@ -366,7 +366,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
         lore.add("");
       }
 
-      lore.add(ChatColor.AQUA + "Soulbound");
+      lore.add(ChatColor.AQUA + "灵魂绑定");
 
       // find path
       String itemPath = getNewIdSupremeLegacy(item.getItemId()).toLowerCase();
@@ -379,20 +379,20 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
       }
 
       if (itemPath.contains("helmet")) {
-        lore.add(ChatColor.DARK_PURPLE + "Night Vision " + amplifier);
-        lore.add(ChatColor.DARK_PURPLE + "Conduit Power " + amplifier);
-        lore.add(ChatColor.DARK_PURPLE + "Water Breathing " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "夜视 " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "水下速掘 " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "水下呼吸 " + amplifier);
       } else if (itemPath.contains("chestplate")) {
-        lore.add(ChatColor.DARK_PURPLE + "Damage Resistance " + amplifier);
-        lore.add(ChatColor.DARK_PURPLE + "Increase Damage " + amplifier);
-        lore.add(ChatColor.DARK_PURPLE + "Saturation " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "伤害抵抗 " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "提升伤害 " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "饱和 " + amplifier);
       } else if (itemPath.contains("leggings")) {
-        lore.add(ChatColor.DARK_PURPLE + "Speed " + amplifier);
-        lore.add(ChatColor.DARK_PURPLE + "Fast Digging " + amplifier);
-        lore.add(ChatColor.DARK_PURPLE + "Regeneration " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "速度 " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "急迫 " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "再生 " + amplifier);
       } else if (itemPath.contains("boots")) {
-        lore.add(ChatColor.DARK_PURPLE + "Dolphins Grace " + amplifier);
-        lore.add(ChatColor.DARK_PURPLE + "Fire Resistance " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "海豚的恩惠 " + amplifier);
+        lore.add(ChatColor.DARK_PURPLE + "抗火 " + amplifier);
       }
 
       meta.setLore(lore);
@@ -435,7 +435,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
         lore.add("");
       }
 
-      lore.add(ChatColor.AQUA + "Soulbound");
+      lore.add(ChatColor.AQUA + "灵魂绑定");
 
       // find path
       String itemPath = getNewIdSupremeLegacy(item.getItemId()).toLowerCase();

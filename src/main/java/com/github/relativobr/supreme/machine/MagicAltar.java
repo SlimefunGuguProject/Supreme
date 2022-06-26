@@ -23,27 +23,27 @@ import org.bukkit.inventory.ItemStack;
 public class MagicAltar extends MediumContainerMachine {
 
   public static final SlimefunItemStack MAGIC_ALTAR_MACHINE = new SupremeItemStack("SUPREME_MAGIC_ALTAR_I",
-      Material.SMOKER, "&bMagic Altar", "", "&fCraft Rune and Magical Items", "",
+      Material.SMOKER, "&b魔法祭坛", "", "&f制作符文和魔法物品", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
-      UtilEnergy.energyPowerPerSecond(20), "", "&3Supreme Machine");
+      UtilEnergy.energyPowerPerSecond(20), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE = new ItemStack[]{SlimefunItems.ANCIENT_PEDESTAL,
       SupremeComponents.SYNTHETIC_RUBY, SlimefunItems.ANCIENT_PEDESTAL, SupremeComponents.CONVEYANCE_MACHINE,
       SlimefunItems.ANCIENT_ALTAR, SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.ANCIENT_PEDESTAL,
       SupremeComponents.INDUCTOR_MACHINE, SlimefunItems.ANCIENT_PEDESTAL};
 
   public static final SlimefunItemStack MAGIC_ALTAR_MACHINE_II = new SupremeItemStack("SUPREME_MAGIC_ALTAR_II",
-      Material.SMOKER, "&bMagic Altar II", "", "&fAdvanced Craft Rune and Magical Items", "",
+      Material.SMOKER, "&b魔法祭坛II", "", "&f更强地制作符文和魔法物品", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(5),
-      UtilEnergy.energyPowerPerSecond(100), "", "&3Supreme Machine");
+      UtilEnergy.energyPowerPerSecond(100), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE_II = new ItemStack[]{SupremeComponents.THORNERITE,
       SupremeCetrus.CETRUS_AQUA, SupremeComponents.THORNERITE, SupremeCetrus.CETRUS_VENTUS,
       MagicAltar.MAGIC_ALTAR_MACHINE, SupremeCetrus.CETRUS_LUX, SupremeComponents.THORNERITE,
       SupremeCetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack MAGIC_ALTAR_MACHINE_III = new SupremeItemStack("SUPREME_MAGIC_ALTAR_III",
-      Material.SMOKER, "&bMagic Altar III", "", "&fAdvanced Craft Rune and Magical Items", "",
+      Material.SMOKER, "&b魔法祭坛III", "", "&f更强地制作符文和魔法物品", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15),
-      UtilEnergy.energyPowerPerSecond(300), "", "&3Supreme Machine");
+      UtilEnergy.energyPowerPerSecond(300), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
       SupremeAttribute.getMagic(), SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
       MagicAltar.MAGIC_ALTAR_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,

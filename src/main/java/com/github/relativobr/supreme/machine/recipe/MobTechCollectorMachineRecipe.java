@@ -32,11 +32,11 @@ public class MobTechCollectorMachineRecipe extends MachineRecipe implements Pred
     List<ItemStack> displayRecipes = new ArrayList();
     displayRecipes.add(
         new CustomItemStack(SupremeComponents.EMPTY_MOBTECH.getType(), SupremeComponents.EMPTY_MOBTECH.getDisplayName(),
-            "", "&fRequires &bBee &fnearby", ""));
+            "", "&f需要&b蜜蜂&f在附近", ""));
     displayRecipes.add(Supreme.buildItemFromMobTechDTO(BeeTech.SIMPLE_BEE, 0));
     displayRecipes.add(
         new CustomItemStack(SupremeComponents.EMPTY_MOBTECH.getType(), SupremeComponents.EMPTY_MOBTECH.getDisplayName(),
-            "", "&fRequires &bIronGolen &fnearby", ""));
+            "", "&f需要&b铁傀儡&f在附近", ""));
     displayRecipes.add(Supreme.buildItemFromMobTechDTO(IronGolemTech.SIMPLE_GOLEM, 0));
     return displayRecipes;
   }
