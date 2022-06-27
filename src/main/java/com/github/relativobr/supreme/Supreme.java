@@ -191,7 +191,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
         return buildLoreTypeLuckAndCloning(tier);
       case MUTATION_INTELLIGENCE:
       case ROBOTIC_EFFICIENCY:
-        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x" + ChatColor.GRAY + "减少能量";
+        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x " + ChatColor.GRAY + "减少能量";
       case SIMPLE:
       default:
         return ChatColor.GRAY + "提升进程速度";
@@ -200,13 +200,13 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
 
   private static String buildLoreTypeLuckAndCloning(Integer tier) {
     if (tier >= 8) {
-      return ChatColor.YELLOW + "5x" + ChatColor.GRAY + "堆栈克隆";
+      return ChatColor.YELLOW + "5x " + ChatColor.GRAY + "堆栈克隆";
     } else if (tier >= 6) {
-      return ChatColor.YELLOW + "4x" + ChatColor.GRAY + "堆栈克隆";
+      return ChatColor.YELLOW + "4x " + ChatColor.GRAY + "堆栈克隆";
     } else if (tier >= 4) {
-      return ChatColor.YELLOW + "3x" + ChatColor.GRAY + "堆栈克隆";
+      return ChatColor.YELLOW + "3x " + ChatColor.GRAY + "堆栈克隆";
     } else {
-      return ChatColor.YELLOW + "2x" + ChatColor.GRAY + "堆栈克隆";
+      return ChatColor.YELLOW + "2x " + ChatColor.GRAY + "堆栈克隆";
     }
   }
 
