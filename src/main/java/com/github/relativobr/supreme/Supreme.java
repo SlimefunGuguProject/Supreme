@@ -184,7 +184,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     switch (mobTechType) {
       case MUTATION_BERSERK:
       case ROBOTIC_ACCELERATION:
-        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x" + ChatColor.GRAY
+        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x " + ChatColor.GRAY
             + "提升速度且提升能量";
       case MUTATION_LUCK:
       case ROBOTIC_CLONING:
@@ -214,16 +214,16 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     switch (mobTechType) {
       case MUTATION_BERSERK:
       case ROBOTIC_ACCELERATION:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x堆栈数/32)速度" + ChatColor.GRAY
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 堆栈数/32)速度" + ChatColor.GRAY
             + "进程值";
       case MUTATION_INTELLIGENCE:
       case ROBOTIC_EFFICIENCY:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "堆栈数)J/s " + ChatColor.GRAY
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "堆栈数) J/s " + ChatColor.GRAY
             + "进程值";
       case MUTATION_LUCK:
       case ROBOTIC_CLONING:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x堆栈数)" + ChatColor.GRAY
-            + "进程值(限制64x)";
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 堆栈数)" + ChatColor.GRAY
+            + "进程值(限制64x )";
       case SIMPLE:
       default:
         return ChatColor.YELLOW + "1x堆栈数" + ChatColor.GRAY + "进程值";
@@ -296,6 +296,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
 
     Supreme.inst().log(Level.INFO, "########################################");
     Supreme.inst().log(Level.INFO, "      Supreme 2.0  - By RelativoBR      ");
+    Supreme.inst().log(Level.INFO, "              汉化:LinYing               ");
     Supreme.inst().log(Level.INFO, "########################################");
 
     Config cfg = new Config(this);
