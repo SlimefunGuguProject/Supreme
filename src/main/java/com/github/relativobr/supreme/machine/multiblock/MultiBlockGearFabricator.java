@@ -30,8 +30,8 @@ import org.bukkit.inventory.ItemStack;
 public class MultiBlockGearFabricator extends MultiBlockMachine implements NotPlaceable {
 
   public static final SlimefunItemStack GEAR_FABRICATOR = new SupremeItemStack("SUPREME_MULTIBLOCK_GEAR",
-      Material.SMITHING_TABLE, "&eGear Fabricator", "", "&7&oYou can craft weapons, armor and tools here!", "",
-      "&aMultiBlock Machine");
+      Material.SMITHING_TABLE, "&e装备工厂", "", "&7&o你可以在这里制造武器，防具和工具！", "",
+      "&a多方块机器");
   public static final RecipeType MACHINE_GEAR_FABRICATOR = new RecipeType(
       new NamespacedKey(Supreme.inst(), "SUPREME_MULTIBLOCK_GEAR_KEY"), GEAR_FABRICATOR);
 

@@ -1,0 +1,11 @@
+version: "1"
+rules:
+  - base: main
+    upstream: RelativoBR:main
+    mergeMethod: merge
+    assignees:
+      - ybw0014
+      - haiman233
+    conflictReviewers:
+      - ybw0014
+      - haiman233

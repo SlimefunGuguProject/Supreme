@@ -11,8 +11,8 @@ import org.bukkit.inventory.ItemStack;
 public class SupremeAttribute {
 
   public static final SlimefunItemStack ATTRIBUTE_MAGIC = new SupremeItemStack("SUPREME_ATTRIBUTE_MAGIC",
-      "16d1c19b0dabdf7360fbd18df9dfd1c615da2f8d2c84fc4216565d9c5dd", "&aAttribute Magic", "",
-      "&7A super magic attribute with special effects", "", "&3Supreme Magical Components");
+      "16d1c19b0dabdf7360fbd18df9dfd1c615da2f8d2c84fc4216565d9c5dd", "&a魔法属性", "",
+      "&7具有特殊效果的超级魔法属性", "", "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_ATTRIBUTE_MAGIC = {new SlimefunItemStack(SupremeCetrus.CETRUS_LUX, 1),
       new SlimefunItemStack(SupremeCetrus.CETRUS_VENTUS, 1), new SlimefunItemStack(SupremeCetrus.CETRUS_LUX, 1),
       new SlimefunItemStack(SupremeCetrus.CETRUS_AQUA, 1), new ItemStack(Material.NETHER_WART, 64),
@@ -20,8 +20,8 @@ public class SupremeAttribute {
       new SlimefunItemStack(SupremeCetrus.CETRUS_VENTUS, 1), new SlimefunItemStack(SupremeCore.CORE_OF_NATURE, 1)};
 
   public static final SlimefunItemStack ATTRIBUTE_BOMB = new SupremeItemStack("SUPREME_ATTRIBUTE_BOMB",
-      "44253275e1b7757130a2d637d07f522fcc6686dc804346f0e71668d5ce6d5891", "&aAttribute Bomb", "",
-      "&7A super bomb attribute with special effects", "", "&3Supreme Magical Components");
+      "44253275e1b7757130a2d637d07f522fcc6686dc804346f0e71668d5ce6d5891", "&a爆炸属性", "",
+      "&7具有特殊效果的超级爆炸属性", "", "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_ATTRIBUTE_BOMB = {new SlimefunItemStack(SupremeCetrus.CETRUS_IGNIS, 1),
       new SlimefunItemStack(SupremeCore.CORE_OF_BLOCK, 1), new SlimefunItemStack(SupremeCetrus.CETRUS_IGNIS, 1),
       new SlimefunItemStack(SupremeCore.CORE_OF_BLOCK, 1), new ItemStack(Material.GUNPOWDER, 64),
@@ -29,8 +29,8 @@ public class SupremeAttribute {
       new SlimefunItemStack(SupremeCore.CORE_OF_BLOCK, 1), new SlimefunItemStack(SupremeCetrus.CETRUS_IGNIS, 1)};
 
   public static final SlimefunItemStack ATTRIBUTE_FORTUNE = new SupremeItemStack("SUPREME_ATTRIBUTE_FORTUNE",
-      "81251d814bdea8fc4881aeb6e7d1f48a2edf9cdba9ab4e3fa7f7359c5b92", "&aAttribute Fortune", "",
-      "&7A super fortune attribute with special effects", "", "&3Supreme Magical Components");
+      "81251d814bdea8fc4881aeb6e7d1f48a2edf9cdba9ab4e3fa7f7359c5b92", "&a幸运属性", "",
+      "&7具有特殊效果的超级幸运属性", "", "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_ATTRIBUTE_FORTUNE = {new ItemStack(Material.DIAMOND_BLOCK, 64),
       new ItemStack(Material.GOLD_BLOCK, 64), new ItemStack(Material.NETHERITE_BLOCK, 64),
       new SlimefunItemStack(SupremeAttribute.getMagic(), 1), new SlimefunItemStack(SupremeCore.CORE_OF_ALLOY, 1),
@@ -38,8 +38,8 @@ public class SupremeAttribute {
       new ItemStack(Material.REDSTONE_BLOCK, 64), new ItemStack(Material.NETHER_STAR, 64)};
 
   public static final SlimefunItemStack ATTRIBUTE_IMPETUS = new SupremeItemStack("SUPREME_ATTRIBUTE_IMPETUS",
-      "f2d27936be90709046d9b4eec4e2a67d6ed583e4cf94f53c0569431357423", "&aAttribute Impetus", "",
-      "&7A super impetus attribute with special effects", "", "&3Supreme Magical Components");
+      "f2d27936be90709046d9b4eec4e2a67d6ed583e4cf94f53c0569431357423", "&a速度属性", "",
+      "&7具有特殊效果的超级速度属性", "", "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_ATTRIBUTE_IMPETUS = {new SlimefunItemStack(SupremeAttribute.getMagic(), 1),
       new SlimefunItemStack(SupremeAttribute.getBomb(), 1), new SlimefunItemStack(SupremeCetrus.CETRUS_AQUA, 1),
       new SlimefunItemStack(SupremeCore.CORE_OF_DEATH, 1), new SlimefunItemStack(SupremeCetrus.CETRUS_IGNIS, 1),

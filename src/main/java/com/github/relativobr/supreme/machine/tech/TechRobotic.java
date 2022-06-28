@@ -43,10 +43,10 @@ import org.springframework.scheduling.annotation.Async;
 public class TechRobotic extends SimpleItemContainerMachine implements Radioactive {
 
   public static final SlimefunItemStack TECH_ROBOTIC = new SupremeItemStack("SUPREME_TECH_ROBOTIC",
-      Material.POLISHED_BLACKSTONE, "&bTech Robotic", "", "&fUse beginner level robots ",
-      "&fto progress to higher levels", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
+      Material.POLISHED_BLACKSTONE, "&b科技机器人", "", "&f将低级机器蜜蜂/傀儡",
+      "&f升级为更高等级", "", LoreBuilder.radioactive(Radioactivity.VERY_HIGH), "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), UtilEnergy.energyPowerPerSecond(500), "",
-      "&3Supreme Machine");
+      "&3至尊机器");
   public static final ItemStack[] RECIPE_TECH_ROBOTIC = {SupremeComponents.INDUCTIVE_MACHINE,
       SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.REINFORCED_PLATE,
       SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.REINFORCED_PLATE, SupremeComponents.RUSTLESS_MACHINE,
@@ -164,7 +164,7 @@ public class TechRobotic extends SimpleItemContainerMachine implements Radioacti
 
       } else {
 
-        invalidProgressBar(inv, "&cTechRobotic de receita não identificados");
+        invalidProgressBar(inv, "&c输入物品无效");
 
       }
 
@@ -216,10 +216,10 @@ public class TechRobotic extends SimpleItemContainerMachine implements Radioacti
               Math.round(ticksTotal / this.getSpeed()), result);
         }
       } else {
-        invalidProgressBar(inv, "&cSem energia para maquina");
+        invalidProgressBar(inv, "&c电力不足");
       }
     } else {
-      invalidProgressBar(inv, "&cFalha no tempo da maquina");
+      invalidProgressBar(inv, "&c机器运行异常");
     }
   }
 

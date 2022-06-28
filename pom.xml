@@ -68,16 +68,16 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.RelativoBR</groupId>
+            <groupId>net.guizhanss</groupId>
             <artifactId>SlimefunRelativeLib</artifactId>
-            <version>v1.1.0</version>
+            <version>bffbbf40b0</version>
         </dependency>
 
         <!-- tradução -->
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLib</artifactId>
-            <version>0.9.0</version>
+            <version>0.9.9</version>
             <scope>compile</scope>
         </dependency>
 
@@ -119,6 +119,12 @@
                 <version>3.2.4</version>
                 <configuration>
                     <minimizeJar>true</minimizeJar>
+                    <relocations>
+                        <relocation>
+                            <pattern>net.guizhanss.guizhanlib</pattern>
+                            <shadedPattern>com.github.relativobr.supreme.guizhanlib</shadedPattern>
+                        </relocation>
+                    </relocations>
                     <filters>
                         <filter>
                             <artifact>*:*</artifact>

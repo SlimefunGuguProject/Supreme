@@ -15,9 +15,9 @@ import org.bukkit.inventory.ItemStack;
 public class SupremeCore {
 
   public static final SlimefunItemStack CORE_OF_LIFE = new SupremeItemStack("SUPREME_CORE_OF_LIFE",
-      "faff2eb498e5c6a04484f0c9f785b448479ab213df95ec91176a308a12add70", "&aCore of Life", "",
-      "&7This core contains fragments of life", "&7that have been collected by the world.", "",
-      "&3Supreme Magical Components");
+      "faff2eb498e5c6a04484f0c9f785b448479ab213df95ec91176a308a12add70", "&a生命核心", "",
+      "&7核心中包含从世界各地", "&7收集到的生命碎片.", "",
+      "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_CORE_OF_LIFE = {
       new SlimefunItemStack(SupremeCoreLife.RESOURCE_CORE_POTATO, 64),
       new SlimefunItemStack(SupremeCoreLife.RESOURCE_CORE_CARROT, 64),
@@ -30,9 +30,9 @@ public class SupremeCore {
       new SlimefunItemStack(SupremeCoreLife.RESOURCE_CORE_APPLE, 64),};
 
   public static final SlimefunItemStack CORE_OF_DEATH = new SupremeItemStack("SUPREME_CORE_OF_DEATH",
-      "9e95293acbcd4f55faf5947bfc5135038b275a7ab81087341b9ec6e453e839", "&aCore of Death", "",
-      "&7This core contains the souls of ", "&7various entities that have gone beyond.", "",
-      "&3Supreme Magical Components");
+      "9e95293acbcd4f55faf5947bfc5135038b275a7ab81087341b9ec6e453e839", "&a死亡核心", "",
+      "&7核心中包含各种", "&7已经超生实体的灵魂", "",
+      "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_CORE_OF_DEATH = {
       new SlimefunItemStack(SupremeCoreDeath.RESOURCE_CORE_PORKCHOP, 64),
       new SlimefunItemStack(SupremeCoreDeath.RESOURCE_CORE_BEEF, 64),
@@ -45,9 +45,9 @@ public class SupremeCore {
       new SlimefunItemStack(SupremeCoreDeath.RESOURCE_CORE_TEAR, 64)};
 
   public static final SlimefunItemStack CORE_OF_COLOR = new SupremeItemStack("SUPREME_CORE_OF_COLOR",
-      "163bcaf6d2679d8d7d9bf6a474a48a77a8e91747a1084c09256ebc86cb74811", "&aCore of Color", "",
-      "&7This core contains several colors", "&7that have been collected around the world.", "",
-      "&3Supreme Magical Components");
+      "163bcaf6d2679d8d7d9bf6a474a48a77a8e91747a1084c09256ebc86cb74811", "&a霓虹核心", "",
+      "&7核心中包含万物的颜色", "&7青出于蓝而胜于蓝.", "",
+      "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_CORE_OF_COLOR = {new SlimefunItemStack(SupremeCoreColor.RESOURCE_CORE_RED, 64),
       new SlimefunItemStack(SupremeCoreColor.RESOURCE_CORE_YELLOW, 64),
       new SlimefunItemStack(SupremeCoreColor.RESOURCE_CORE_PURPLE, 64),
@@ -59,9 +59,9 @@ public class SupremeCore {
       new SlimefunItemStack(SupremeCoreColor.RESOURCE_CORE_CYAN, 64)};
 
   public static final SlimefunItemStack CORE_OF_BLOCK = new SupremeItemStack("SUPREME_CORE_OF_BLOCK",
-      "14d844fee24d5f27ddb669438528d83b684d901b75a6889fe7488dfc4cf7a1c", "&aCore of Block", "",
-      "&7This core contains several blocks", "&7that have been collected around the world.", "",
-      "&3Supreme Magical Components");
+      "14d844fee24d5f27ddb669438528d83b684d901b75a6889fe7488dfc4cf7a1c", "&a方块核心", "",
+      "&7核心中包含从世界各地", "&7收集到的方块.", "",
+      "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_CORE_OF_BLOCK = {
       new SlimefunItemStack(SupremeCoreBlock.RESOURCE_CORE_STONE, 64),
       new SlimefunItemStack(SupremeCoreBlock.RESOURCE_CORE_GRANITE, 64),
@@ -74,9 +74,9 @@ public class SupremeCore {
       new SlimefunItemStack(SupremeCoreBlock.RESOURCE_CORE_SNOW, 64)};
 
   public static final SlimefunItemStack CORE_OF_NATURE = new SupremeItemStack("SUPREME_CORE_OF_NATURE",
-      "32fa8f38c7b22096619c3a6d6498b405530e48d5d4f91e2aacea578844d5c67", "&aCore of Nature", "",
-      "&7This core contains several natural", "&7that have been collected around the world.", "",
-      "&3Supreme Magical Components");
+      "32fa8f38c7b22096619c3a6d6498b405530e48d5d4f91e2aacea578844d5c67", "&a自然核心", "",
+      "&7核心中包含大自然的力量.", "",
+      "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_CORE_OF_NATURE = {
       new SlimefunItemStack(SupremeCoreNature.RESOURCE_CORE_OAK_LOG, 64),
       new SlimefunItemStack(SupremeCoreNature.RESOURCE_CORE_SPRUCE_LOG, 64),
@@ -89,9 +89,9 @@ public class SupremeCore {
       new SlimefunItemStack(SupremeCoreNature.RESOURCE_CORE_WARPED_STEM, 64)};
 
   public static final SlimefunItemStack CORE_OF_ALLOY = new SupremeItemStack("SUPREME_CORE_OF_ALLOY",
-      "cbfb41f866e7e8e593659986c9d6e88cd37677b3f7bd44253e5871e66d1d424", "&aCore of Alloy", "",
-      "&7This core contains several ores", "&7that have been collected around the world.", "",
-      "&3Supreme Magical Components");
+      "cbfb41f866e7e8e593659986c9d6e88cd37677b3f7bd44253e5871e66d1d424", "&a矿石核心", "",
+      "&7核心中包含了各种矿石", "&7它们是玩家工业化的基础.", "",
+      "&3至尊魔法合成材料");
   public static final ItemStack[] RECIPE_CORE_OF_ALLOY = {
       new SlimefunItemStack(SupremeCoreAlloy.RESOURCE_CORE_COAL, 64),
       new SlimefunItemStack(SupremeCoreAlloy.RESOURCE_CORE_IRON, 64),
