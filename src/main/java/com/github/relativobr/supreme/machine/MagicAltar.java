@@ -32,7 +32,7 @@ public class MagicAltar extends MediumContainerMachine {
       SupremeComponents.INDUCTOR_MACHINE, SlimefunItems.ANCIENT_PEDESTAL};
 
   public static final SlimefunItemStack MAGIC_ALTAR_MACHINE_II = new SupremeItemStack("SUPREME_MAGIC_ALTAR_II",
-      Material.SMOKER, "&b魔法祭坛II", "", "&f更强地制作符文和魔法物品", "",
+      Material.SMOKER, "&b魔法祭坛II", "", "&f更快地制作符文和魔法物品", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(5),
       UtilEnergy.energyPowerPerSecond(100), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE_II = new ItemStack[]{SupremeComponents.THORNERITE,
@@ -41,7 +41,7 @@ public class MagicAltar extends MediumContainerMachine {
       SupremeCetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack MAGIC_ALTAR_MACHINE_III = new SupremeItemStack("SUPREME_MAGIC_ALTAR_III",
-      Material.SMOKER, "&b魔法祭坛III", "", "&f更强地制作符文和魔法物品", "",
+      Material.SMOKER, "&b魔法祭坛III", "", "&f更快地制作符文和魔法物品", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15),
       UtilEnergy.energyPowerPerSecond(300), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
