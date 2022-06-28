@@ -49,7 +49,14 @@ import org.springframework.scheduling.annotation.Async;
 public class TechGenerator extends SimpleItemContainerMachine implements Radioactive {
 
   public static final SlimefunItemStack TECH_GENERATOR = new SupremeItemStack("SUPREME_TECH_GENERATOR", Material.LOOM,
-      "&b科技生成器", "", "&f用电/傀儡, ", "&f缓慢生成物质", "",
+      "&b生物科技生成器",
+      "",
+      "&f使用&4卡片&f生成各种物品",
+      "",
+      "&f使用机器蜜蜂/傀儡来加速生产",
+      "&f在&4生物科技&f分类中",
+      "&f查看机器蜜蜂/傀儡",
+      "",
       LoreBuilder.radioactive(Radioactivity.HIGH), "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
       UtilEnergy.energyPowerPerSecond(2000), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_TECH_GENERATOR = {SupremeComponents.INDUCTIVE_MACHINE,

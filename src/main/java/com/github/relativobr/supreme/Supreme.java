@@ -216,19 +216,19 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     switch (mobTechType) {
       case MUTATION_BERSERK:
       case ROBOTIC_ACCELERATION:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 堆栈数/32)速度" + ChatColor.GRAY
-            + "进程值";
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 物品组数/32) 速度" + ChatColor.GRAY
+            + "";
       case MUTATION_INTELLIGENCE:
       case ROBOTIC_EFFICIENCY:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "堆栈数) J/s " + ChatColor.GRAY
-            + "进程值";
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 物品组数) J/s " + ChatColor.GRAY
+            + "";
       case MUTATION_LUCK:
       case ROBOTIC_CLONING:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 堆栈数)" + ChatColor.GRAY
-            + "进程值(限制64x )";
+        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 物品组数)" + ChatColor.GRAY
+            + "(上限64x)";
       case SIMPLE:
       default:
-        return ChatColor.YELLOW + "1x 堆栈数" + ChatColor.GRAY + "处理速度";
+        return ChatColor.YELLOW + "1x 物品组数" + ChatColor.GRAY + " 处理速度";
     }
   }
 
