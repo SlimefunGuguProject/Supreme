@@ -95,7 +95,7 @@ public class SupremeGenerator {
   public static final SlimefunItemStack AQUA_GENERATOR = new SupremeItemStack("SUPREME_AQUA_GENERATOR",
       Material.BLUE_GLAZED_TERRACOTTA, false, LoreBuilder.machine(MachineTier.ADVANCED, MachineType.GENERATOR),
       UtilEnergy.energyBuffer(getValueGeneratorsWithLimit(AQUA_BUFFER)),
-      UtilEnergy.energyPowerPerSecond(getValueGeneratorsWithLimit(AQUA_ENERGY)), "", "&3Supreme Machine");
+      UtilEnergy.energyPowerPerSecond(getValueGeneratorsWithLimit(AQUA_ENERGY)));
   public static final ItemStack[] RECIPE_AQUA_GENERATOR = new ItemStack[]{SupremeComponents.MANGANESE_PLATE,
       SupremeCetrus.CETRUS_AQUA, SupremeComponents.MANGANESE_PLATE, SupremeComponents.INDUCTOR_MACHINE,
       SupremeGenerator.BASIC_AQUA_GENERATOR, SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CONVEYANCE_MACHINE,

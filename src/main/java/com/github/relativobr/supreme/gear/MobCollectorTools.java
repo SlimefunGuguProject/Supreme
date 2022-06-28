@@ -32,19 +32,19 @@ public class MobCollectorTools extends SlimefunItem implements Rechargeable, Not
 
   public static final SlimefunItemStack MOB_COLLECTOR_I = new SupremeItemStack("SUPREME_MOB_COLLECTOR_TOOL_I",
       Material.IRON_SHOVEL, false,
-      LoreBuilder.power(50, " per use"), LoreBuilder.powerCharged(0, 500));
+      LoreBuilder.power(50, " 每次使用"), LoreBuilder.powerCharged(0, 500));
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_I = new ItemStack[]{null, SupremeComponents.SYNTHETIC_RUBY, null,
       null, WeaponsBasic.AURUM_SWORD, null, null, SlimefunItems.MEDIUM_CAPACITOR, null};
 
   public static final SlimefunItemStack MOB_COLLECTOR_II = new SupremeItemStack("SUPREME_MOB_COLLECTOR_TOOL_II",
       Material.DIAMOND_SHOVEL, false,
-      LoreBuilder.power(50, " per use"), LoreBuilder.powerCharged(0, 5000));
+      LoreBuilder.power(50, " 每次使用"), LoreBuilder.powerCharged(0, 5000));
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_II = new ItemStack[]{null, SupremeCore.CORE_OF_LIFE, null, null,
       MobCollectorTools.MOB_COLLECTOR_I, null, null, SupremeCetrus.CETRUS_VENTUS, null};
 
   public static final SlimefunItemStack MOB_COLLECTOR_III = new SupremeItemStack("SUPREME_MOB_COLLECTOR_TOOL_III",
       Material.NETHERITE_SHOVEL, false,
-      LoreBuilder.power(50, " per use"), LoreBuilder.powerCharged(0, 50000));
+      LoreBuilder.power(50, " 每次使用"), LoreBuilder.powerCharged(0, 50000));
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_III = new ItemStack[]{null, SupremeAttribute.getBomb(), null,
       null, MobCollectorTools.MOB_COLLECTOR_II, null, null, SupremeCetrus.CETRUS_LUMIUM, null};
   int charge;
