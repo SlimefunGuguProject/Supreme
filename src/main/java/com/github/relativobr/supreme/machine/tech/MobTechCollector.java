@@ -46,8 +46,8 @@ import org.springframework.scheduling.annotation.Async;
 public class MobTechCollector extends AContainer implements RecipeDisplayItem {
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_I = new SupremeItemStack(
-      "MOB_TECH_COLLECTOR_MACHINE", Material.NETHER_GOLD_ORE, "&b怪物科技收集器I", "",
-      "&f这个机器允许你收集", "&f附近生物的怪物科技(3格)", "",
+      "MOB_TECH_COLLECTOR_MACHINE", Material.NETHER_GOLD_ORE, "&b生物科技收集器I", "",
+      "&f这个机器允许你收集", "&f附近生物的生物科技(3格)", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_I = new ItemStack[]{
@@ -56,8 +56,8 @@ public class MobTechCollector extends AContainer implements RecipeDisplayItem {
       SupremeComponents.AURUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_3_BUTCHER, SupremeComponents.AURUM_PLATE};
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_II = new SupremeItemStack(
-      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_II", Material.NETHER_GOLD_ORE, "&b怪物科技收集器II", "",
-      "&f这个机器允许你收集", "&f附近生物的怪物科技(6格)", "",
+      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_II", Material.NETHER_GOLD_ORE, "&b生物科技收集器II", "",
+      "&f这个机器允许你收集", "&f附近生物的生物科技(6格)", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_II = new ItemStack[]{
@@ -67,8 +67,8 @@ public class MobTechCollector extends AContainer implements RecipeDisplayItem {
       SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE_III = new SupremeItemStack(
-      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_III", Material.NETHER_GOLD_ORE, "&b怪物科技收集器III", "",
-      "&f这个机器允许你收集", "&f附近生物的怪物科技(9格)", "",
+      "SUPREME_MOB_TECH_COLLECTOR_MACHINE_III", Material.NETHER_GOLD_ORE, "&b生物科技收集器III", "",
+      "&f这个机器允许你收集", "&f附近生物的生物科技(9格)", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3至尊机器");
   public static final ItemStack[] RECIPE_MOB_TECH_COLLECTOR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,

@@ -290,7 +290,7 @@ public class SupremeComponents {
       null, null, null, null, null, null, null};
 
   public static final SlimefunItemStack EMPTY_MOBTECH = new SupremeItemStack("SUPREME_EMPTY_MOBTECH",
-      Material.FIRE_CHARGE, "&a空怪物科技", "", "&3至尊合成材料");
+      Material.FIRE_CHARGE, "&a空生物科技", "", "&3至尊合成材料");
   public static final ItemStack[] RECIPE_EMPTY_MOBTECH = new ItemStack[]{SlimefunItems.MAGIC_LUMP_2,
       SlimefunItems.STONE_CHUNK, SlimefunItems.ENDER_LUMP_2, null, null, null, null, null, null};
 
