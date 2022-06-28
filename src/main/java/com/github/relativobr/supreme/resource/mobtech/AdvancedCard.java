@@ -16,11 +16,11 @@ public class AdvancedCard {
    */
 
   public static final SlimefunItemStack CARD_SOLDER_INGOT = new SupremeItemStack("SUPREME_CARD_SOLDER",
-      Material.MUSIC_DISC_BLOCKS, "&b焊锭卡片", "", "&f改为生产焊锭", "",
+      Material.MUSIC_DISC_BLOCKS, "&b焊锡锭卡片", "", "&f改为生产焊锡锭", "",
       LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_BILLON_INGOT = new SupremeItemStack("SUPREME_CARD_BILLON",
-      Material.MUSIC_DISC_BLOCKS, "&b十亿锭卡片", "", "&f改为生产十亿锭", "",
+      Material.MUSIC_DISC_BLOCKS, "&b银铜合金锭卡片", "", "&f改为生产银铜合金锭", "",
       LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_BRONZE_INGOT = new SupremeItemStack("SUPREME_CARD_BRONZE",
@@ -41,7 +41,7 @@ public class AdvancedCard {
 
 
   public static final SlimefunItemStack CARD_SILICON = new SupremeItemStack("SUPREME_CARD_SILICON",
-      Material.MUSIC_DISC_BLOCKS, "&b硅卡片", "", "&f改为生产Silicon", "",
+      Material.MUSIC_DISC_BLOCKS, "&b硅卡片", "", "&f改为生产硅", "",
       LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&3至尊合成材料");
 
 

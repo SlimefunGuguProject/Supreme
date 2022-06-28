@@ -93,7 +93,7 @@ public class SimpleCard {
 
 
   public static final SlimefunItemStack CARD_LAPIS = new SupremeItemStack("SUPREME_CARD_LAPIS", Material.MUSIC_DISC_13,
-      "&b铅笔(?)卡片", "", "&f改为生产铅笔", "",
+      "&b青金石卡片", "", "&f改为生产青金石", "",
       LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
 
 
