@@ -68,9 +68,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.RelativoBR</groupId>
+            <groupId>net.guizhanss</groupId>
             <artifactId>SlimefunRelativeLib</artifactId>
-            <version>v1.1.0</version>
+            <version>bffbbf40b0</version>
         </dependency>
 
         <!-- tradução -->
