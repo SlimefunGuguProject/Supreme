@@ -234,7 +234,7 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
 
       } else {
 
-        invalidSituacao(inv, "&cCards de receita não identificados");
+        invalidSituacao(inv, "&c无效的输入物品");
 
       }
 
@@ -390,10 +390,10 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
         }
       } else {
         final int consumption = checkDownConsumption(this.getEnergyConsumption(), inv);
-        invalidSituacao(inv, "&c机器没电 (" + consumption + " j/s)");
+        invalidSituacao(inv, "&c电力不足 (需求: " + consumption + " J/s)");
       }
     } else {
-      invalidSituacao(inv, "&c机器时间故障");
+      invalidSituacao(inv, "&c机器运行异常");
     }
   }
 
