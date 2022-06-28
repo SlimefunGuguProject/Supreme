@@ -14,6 +14,8 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
+
+import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
 import org.bukkit.ChatColor;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -37,21 +39,14 @@ public class ItemUtil {
         .collect(Collectors.toList());
     for (AbstractQuarryOutputItem outputItem : outputItems) {
       if (outputItem != null && outputItem.getItemStack() != null && outputItem.getItemStack().getItemMeta() != null) {
-        String name = outputItem.getItemStack().getType().name();
-        if (outputItem.getItemStack().getItemMeta().hasDisplayName()) {
-          name = outputItem.getItemStack().getItemMeta().getDisplayName();
-        } else {
-          name = name.replace("_", " ");
-          name = name.substring(0, 1).toUpperCase().concat(name.substring(1).toLowerCase());
-          name = ChatColor.AQUA + name;
-        }
-        lore.add(name + " " + ChatColor.YELLOW + outputItem.getChance() + "%");
+        String name = ItemStackHelper.getDisplayName(outputItem.getItemStack());
+        lore.add(ChatColor.AQUA + name + " " + ChatColor.YELLOW + outputItem.getChance() + "%");
       }
     }
 
     if (getSupremeOptions().isLimitProductionQuarry()) {
       lore.add(" ");
-      lore.add(ChatColor.GOLD + "Limit Production Quarry");
+      lore.add(ChatColor.GOLD + "已限制产能");
     }
 
     lastElementLore.ifPresent(lore::addAll);
