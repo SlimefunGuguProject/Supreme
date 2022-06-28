@@ -3,9 +3,8 @@
 
 ## 重要信息
 该附属 "至尊研究院 2.0" 可以兼容 "至尊研究院 1.0"，只需要在配置文件中设置`use-legacy-supremeexpansion-item-id`为`true`即可。
-# 下载
 
-**该附属已更新到2.0版本，本仓库是1.0版本。我们暂时还没有翻译完2.0版本，请等待一段时间。**
+## 下载
 
 点击这里下载 Supreme: [下载 Supreme](https://builds.guizhanss.net/SlimefunGuguProject/Supreme/main)
 
