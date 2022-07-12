@@ -36,14 +36,14 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.18.1-R0.1-SNAPSHOT</version>
+            <version>1.19-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>io.github.Slimefun</groupId>
+            <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-31</version>
+            <version>RC-32</version>
             <scope>provided</scope>
         </dependency>
 
@@ -68,9 +68,9 @@
         </dependency>
 
         <dependency>
-            <groupId>net.guizhanss</groupId>
+            <groupId>com.github.SlimefunGuguProject</groupId>
             <artifactId>SlimefunRelativeLib</artifactId>
-            <version>bffbbf40b0</version>
+            <version>88a1e9254e</version>
         </dependency>
 
         <!-- tradução -->
