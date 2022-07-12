@@ -48,9 +48,9 @@ import org.springframework.scheduling.annotation.Async;
 public class CheckInventory extends SlimefunItem implements InventoryBlock {
 
   public static final SlimefunItemStack CHECK_INVENTORY = new SlimefunItemStack("SUPREME_CHECK_INVENTORY",
-      Material.REDSTONE_LAMP, "&bCheckInventory", "", "&fChecks if the nearby chest has the filter item",
-      "&fall faces are being considered (find first)", "&fif found, this block will light up", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
-      LoreBuilder.speed(1), UtilEnergy.energyPowerPerSecond(0), "", "&3Supreme Machine");
+      Material.REDSTONE_LAMP, "&b箱子物品检测器", "", "&f检测相邻的箱子是否拥有指定物品,",
+      "&f会检测六个方向的箱子,", "&f如果找到指定物品, 方块会被点亮", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
+      LoreBuilder.speed(1), UtilEnergy.energyPowerPerSecond(0), "", "&3至尊机器");
   private static final ItemStack[] RECIPE_CHECK_INVENTORY = new ItemStack[]{SupremeComponents.AURUM_PLATE,
       new ItemStack(Material.REDSTONE_LAMP), SupremeComponents.AURUM_PLATE, SupremeComponents.INDUCTIVE_MACHINE,
       SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, new ItemStack(Material.REDSTONE_BLOCK),

@@ -54,9 +54,7 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
       "",
       "&f使用&4卡片&f生成各种物品",
       "",
-      "&f使用机器蜜蜂/傀儡来加速生产",
-      "&f在&4生物科技&f分类中",
-      "&f查看机器蜜蜂/傀儡",
+      "&f使用&4生物科技&f来加速生产",
       "",
       LoreBuilder.radioactive(Radioactivity.HIGH), "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
       UtilEnergy.energyPowerPerSecond(2000), "", "&3至尊机器");
@@ -215,7 +213,7 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
 
       } else {
 
-        invalidSituacao(inv, "&c无效的输入物品");
+        invalidStatus(inv, "&c无效的输入物品");
 
       }
 
@@ -302,10 +300,10 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
         }
       } else {
         final int consumption = checkDownConsumption(this.getEnergyConsumption(), inv);
-        invalidSituacao(inv, "&c电力不足 (需求: " + consumption + " J/s)");
+        invalidStatus(inv, "&c电力不足 (需求: " + consumption + " J/s)");
       }
     } else {
-      invalidSituacao(inv, "&c机器运行异常");
+      invalidStatus(inv, "&c机器运行异常");
     }
   }
 

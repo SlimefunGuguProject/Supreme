@@ -41,7 +41,7 @@ public class MobTechCollectorMachineRecipe extends MachineRecipe implements Pred
     displayRecipes.add(Supreme.buildItemFromMobTechDTO(IronGolemTech.SIMPLE_GOLEM, 0));
     displayRecipes.add(
         new CustomItemStack(SupremeComponents.EMPTY_MOBTECH.getType(), SupremeComponents.EMPTY_MOBTECH.getDisplayName(),
-            "", "&fRequires &bZombie &fnearby", ""));
+            "", "&f需要&b僵尸&f在附近", ""));
     displayRecipes.add(Supreme.buildItemFromMobTechDTO(ZombieTech.SIMPLE_ZOMBIE, 0));
     return displayRecipes;
   }

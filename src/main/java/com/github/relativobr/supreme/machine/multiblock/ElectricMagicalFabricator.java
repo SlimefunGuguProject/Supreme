@@ -25,9 +25,9 @@ import org.bukkit.inventory.ItemStack;
 public class ElectricMagicalFabricator extends MediumContainerMachine {
 
   public static final SlimefunItemStack ELECTRIC_MAGICAL_MACHINE = new SupremeItemStack("SUPREME_ELECTRIC_MAGICAL_I",
-      Material.CRYING_OBSIDIAN, "&bElectric Magical Machine", "", "&fCraft resource of magical", "",
+      Material.CRYING_OBSIDIAN, "&b电力魔法工厂", "", "&f合成魔法资源", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
-      UtilEnergy.energyPowerPerSecond(20), "", "&3Supreme Machine");
+      UtilEnergy.energyPowerPerSecond(20), "", "&3至尊机器");
 
   public static final ItemStack[] RECIPE_ELECTRIC_MAGICAL_MACHINE = new ItemStack[]{
       SupremeCoreAlloy.RESOURCE_CORE_NETHERITE, new ItemStack(Material.CRYING_OBSIDIAN),
@@ -36,9 +36,9 @@ public class ElectricMagicalFabricator extends MediumContainerMachine {
       SlimefunItems.ELECTRIC_MOTOR};
 
   public static final SlimefunItemStack ELECTRIC_MAGICAL_MACHINE_II = new SupremeItemStack(
-      "SUPREME_ELECTRIC_MAGICAL_II", Material.CRYING_OBSIDIAN, "&bElectric Magical Machine II", "",
-      "&fAdvanced craft resource of magical", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
-      LoreBuilder.speed(5), UtilEnergy.energyPowerPerSecond(100), "", "&3Supreme Machine");
+      "SUPREME_ELECTRIC_MAGICAL_II", Material.CRYING_OBSIDIAN, "&b电力魔法工厂 II", "",
+      "&f更快地合成魔法资源", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
+      LoreBuilder.speed(5), UtilEnergy.energyPowerPerSecond(100), "", "&3至尊机器");
 
   public static final ItemStack[] RECIPE_ELECTRIC_MAGICAL_MACHINE_II = new ItemStack[]{
       SupremeComponents.CONVEYANCE_MACHINE, SupremeCetrus.CETRUS_LUX, SupremeComponents.CONVEYANCE_MACHINE,
@@ -47,9 +47,9 @@ public class ElectricMagicalFabricator extends MediumContainerMachine {
       SupremeComponents.BLEND_MACHINE};
 
   public static final SlimefunItemStack ELECTRIC_MAGICAL_MACHINE_III = new SupremeItemStack(
-      "SUPREME_ELECTRIC_MAGICAL_III", Material.CRYING_OBSIDIAN, "&bElectric Magical Machine III", "",
-      "&fAdvanced craft resource of magical", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
-      LoreBuilder.speed(15), UtilEnergy.energyPowerPerSecond(300), "", "&3Supreme Machine");
+      "SUPREME_ELECTRIC_MAGICAL_III", Material.CRYING_OBSIDIAN, "&b电力魔法工厂 III", "",
+      "&f更快地合成魔法资源", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
+      LoreBuilder.speed(15), UtilEnergy.energyPowerPerSecond(300), "", "&3至尊机器");
 
   public static final ItemStack[] RECIPE_ELECTRIC_MAGICAL_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
       SupremeCetrus.CETRUS_LUX, SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
