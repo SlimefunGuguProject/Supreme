@@ -297,8 +297,8 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     instance = this;
 
     Supreme.inst().log(Level.INFO, "########################################");
-    Supreme.inst().log(Level.INFO, "      Supreme 2.0  - By RelativoBR      ");
-    Supreme.inst().log(Level.INFO, "              汉化:LinYing               ");
+    Supreme.inst().log(Level.INFO, "      Supreme 2.0  作者:RelativoBR       ");
+    Supreme.inst().log(Level.INFO, "         汉化:SlimefunGuguProject        ");
     Supreme.inst().log(Level.INFO, "########################################");
 
     Config cfg = new Config(this);
