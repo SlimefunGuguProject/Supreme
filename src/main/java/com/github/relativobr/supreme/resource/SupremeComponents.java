@@ -112,7 +112,7 @@ public class SupremeComponents {
       SlimefunItems.SILVER_INGOT, null, null, null, null, null, null};
 
   public static final SlimefunItemStack IRIDIUM_PLATE = new SupremeItemStack("SUPREME_IRIDIUM_PLATE",
-      Material.IRON_BLOCK, "&a钛板", "", "&3至尊合成材料");
+      Material.IRON_BLOCK, "&a铱板", "", "&3至尊合成材料");
   public static final ItemStack[] RECIPE_IRIDIUM_PLATE = {SupremeComponents.ALLOY_IRIDIUM,
       SupremeComponents.ALLOY_IRIDIUM, SupremeComponents.ALLOY_IRIDIUM, SupremeCoreBlock.RESOURCE_CORE_GRAVEL,
       SupremeCoreBlock.RESOURCE_CORE_GRAVEL, SupremeCoreBlock.RESOURCE_CORE_GRAVEL, SupremeComponents.ALLOY_IRIDIUM,
