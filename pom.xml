@@ -70,7 +70,7 @@
         <dependency>
             <groupId>com.github.SlimefunGuguProject</groupId>
             <artifactId>SlimefunRelativeLib</artifactId>
-            <version>88a1e9254e</version>
+            <version>582e6a449c</version>
         </dependency>
 
         <!-- tradução -->
