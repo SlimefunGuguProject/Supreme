@@ -120,9 +120,9 @@ public class MobCollector extends SimpleItemWithLargeContainerMachine {
     this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
         new ItemStack(Material.HONEY_BOTTLE, this.getSpeed()), (n) -> n instanceof Bee));
     this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
-        new ItemStack(Material.INK_SAC, this.getSpeed()), (n) -> n instanceof Squid));
-    this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
         new ItemStack(Material.GLOW_INK_SAC, this.getSpeed()), (n) -> n instanceof GlowSquid));
+    this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
+        new ItemStack(Material.INK_SAC, this.getSpeed()), (n) -> n instanceof Squid));
     this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
         new ItemStack(Material.EXPERIENCE_BOTTLE, this.getSpeed()), (n) -> n instanceof Wither));
     this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
