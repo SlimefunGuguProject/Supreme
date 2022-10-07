@@ -497,7 +497,7 @@ items:
       - "&f&lA Rare Shovel of Thornium"
       - ""
       - "&3Supreme Tools"
-  thornium_shovel_epic:
+  supreme_shovel_epic:
     name: "&d&lEpic Shovel"
     lore:
       - "&f&lA Epic Shovel of Thornium"
