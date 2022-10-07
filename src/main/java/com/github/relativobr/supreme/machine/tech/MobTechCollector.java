@@ -148,7 +148,6 @@ public class MobTechCollector extends SimpleItemWithLargeContainerMachine {
           Block invBlock = inv.getBlock();
           produce.getClass();
           if (this.isAnimalNearby(invBlock, produce::test)) {
-            inv.consumeItem(slot, 1);
             return produce;
           }
         }
