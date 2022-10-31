@@ -5,7 +5,7 @@ rules:
     mergeMethod: merge
     assignees:
       - ybw0014
-      - haiman233
+      - LinYingLY
     conflictReviewers:
       - ybw0014
-      - haiman233
+      - LinYingLY
