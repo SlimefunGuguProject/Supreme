@@ -27,8 +27,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import javax.annotation.Nonnull;
-
-import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
@@ -54,23 +52,24 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
       ConfigurationSection typeSection = inst().getConfig().getConfigurationSection("options");
       if (typeSection != null) {
         supremeOptions = SupremeOptions.builder().autoUpdate(typeSection.getBoolean("auto-update"))
-                .useLegacySupremeexpansionItemId(typeSection.getBoolean("use-legacy-supremeexpansion-item-id", false))
-                .lang(typeSection.getString("lang", "en-US"))
-                .customTickerDelay(typeSection.getInt("custom-ticker-delay"))
-                .enableGenerators(typeSection.getBoolean("enable-generators", true))
-                .limitProductionGenerators(typeSection.getBoolean("limit-production-generators", false))
-                .enableQuarry(typeSection.getBoolean("enable-quarry", true))
-                .limitProductionQuarry(typeSection.getBoolean("limit-production-quarry", false))
-                .baseTimeVirtualGarden(typeSection.getInt("base-time-virtual-garden", 15))
-                .baseTimeVirtualAquarium(typeSection.getInt("base-time-virtual-aquarium", 15))
-                .baseTimeMobCollector(typeSection.getInt("base-time-mob-collector", 15))
-                .baseTimeTechGenerator(typeSection.getInt("base-time-tech-generator", 1800))
-                .enableWeapons(typeSection.getBoolean("enable-weapons", true))
-                .enableTools(typeSection.getBoolean("enable-tools", true))
-                .enableArmor(typeSection.getBoolean("enable-armor", true))
-                .enableTech(typeSection.getBoolean("enable-tech", true))
-                .enableItemConverter(typeSection.getBoolean("enable-item-converter-machine", true))
-                .customBc(typeSection.getBoolean("custom-bc", false)).build();
+            .useLegacySupremeexpansionItemId(
+                typeSection.getBoolean("use-legacy-supremeexpansion-item-id", false))
+            .lang(typeSection.getString("lang", "en-US"))
+            .customTickerDelay(typeSection.getInt("custom-ticker-delay"))
+            .enableGenerators(typeSection.getBoolean("enable-generators", true))
+            .limitProductionGenerators(typeSection.getBoolean("limit-production-generators", false))
+            .enableQuarry(typeSection.getBoolean("enable-quarry", true))
+            .limitProductionQuarry(typeSection.getBoolean("limit-production-quarry", false))
+            .baseTimeVirtualGarden(typeSection.getInt("base-time-virtual-garden", 15))
+            .baseTimeVirtualAquarium(typeSection.getInt("base-time-virtual-aquarium", 15))
+            .baseTimeMobCollector(typeSection.getInt("base-time-mob-collector", 15))
+            .baseTimeTechGenerator(typeSection.getInt("base-time-tech-generator", 1800))
+            .enableWeapons(typeSection.getBoolean("enable-weapons", true))
+            .enableTools(typeSection.getBoolean("enable-tools", true))
+            .enableArmor(typeSection.getBoolean("enable-armor", true))
+            .enableTech(typeSection.getBoolean("enable-tech", true))
+            .enableItemConverter(typeSection.getBoolean("enable-item-converter-machine", true))
+            .customBc(typeSection.getBoolean("custom-bc", false)).build();
       }
     }
     return supremeOptions;
@@ -190,17 +189,18 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
   }
 
   public static String buildLoreType(MobTechType mobTechType, Integer tier) {
+    String tierString = String.valueOf(tier + 1);
     switch (mobTechType) {
       case MUTATION_BERSERK:
       case ROBOTIC_ACCELERATION:
-        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x " + ChatColor.GRAY
-            + "提升处理速度但增加电力消耗";
+        return ChatColor.YELLOW + "+" + tierString + "x " + ChatColor.GRAY + "处理速度" +
+            ChatColor.YELLOW + "+" + tierString + "0%" + ChatColor.GRAY +"电力消耗";
       case MUTATION_LUCK:
       case ROBOTIC_CLONING:
         return buildLoreTypeLuckAndCloning(tier);
       case MUTATION_INTELLIGENCE:
       case ROBOTIC_EFFICIENCY:
-        return ChatColor.YELLOW + String.valueOf(tier + 1) + "x " + ChatColor.GRAY + "减少电力消耗";
+        return ChatColor.YELLOW + tierString + "0% " + ChatColor.GRAY + "减少电力消耗";
       case SIMPLE:
       default:
         return ChatColor.GRAY + "提升处理速度";
@@ -220,38 +220,44 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
   }
 
   private static String buildLoreTypeAmount(MobTechType mobTechType, Integer tier) {
+    String tierString = String.valueOf(tier + 1);
     switch (mobTechType) {
       case MUTATION_BERSERK:
       case ROBOTIC_ACCELERATION:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 物品组数/32) 速度" + ChatColor.GRAY
-            + "";
+        return ChatColor.YELLOW + "增加 (" + tierString+ " x 物品组数 x 0.5)  "
+            + ChatColor.GRAY + " 处理速度";
       case MUTATION_INTELLIGENCE:
       case ROBOTIC_EFFICIENCY:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 物品组数) J/s " + ChatColor.GRAY
-            + "";
+        return ChatColor.YELLOW + "减少 (" + tierString + " x 物品组数 x 0.15625)"
+            + ChatColor.GRAY + " 电力消耗";
       case MUTATION_LUCK:
       case ROBOTIC_CLONING:
-        return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x 物品组数)" + ChatColor.GRAY
-            + "(上限64x)";
+        return ChatColor.YELLOW + "(" + tierString + "x 物品组数)"
+            + ChatColor.GRAY + " 处理速度 (上限: 64x)";
       case SIMPLE:
       default:
         return ChatColor.YELLOW + "1x 物品组数" + ChatColor.GRAY + " 处理速度";
     }
   }
 
-  public static SlimefunItemStack buildItemFromMobTechDTO(MobTechGeneric MobTechGeneric, Integer tier) {
-    return new SlimefunItemStack(buildIdTier(MobTechGeneric.getId(), tier), MobTechGeneric.getTexture(),
-        buildNameTier(MobTechGeneric.getName(), tier), "", buildLoreRadioactivityType(MobTechGeneric.getMobTechType()),
-        buildLoreType(MobTechGeneric.getMobTechType(), tier),
-        buildLoreTypeAmount(MobTechGeneric.getMobTechType(), tier), "", "&3至尊合成材料");
+  public static SlimefunItemStack buildItemFromMobTechDTO(MobTechGeneric mobTechGeneric,
+      Integer tier) {
+    return new SlimefunItemStack(buildIdTier(mobTechGeneric.getId(), tier),
+        mobTechGeneric.getTexture(),
+        buildNameTier(mobTechGeneric.getName(), tier), "",
+        buildLoreRadioactivityType(mobTechGeneric.getMobTechType()),
+        buildLoreType(mobTechGeneric.getMobTechType(), tier),
+        buildLoreTypeAmount(mobTechGeneric.getMobTechType(), tier), "", "&3至尊合成材料");
   }
 
   public static AbstractQuarryOutput getOutputQuarry(@Nonnull SlimefunItemStack item) {
 
-    ConfigurationSection typeSection = inst().getConfig().getConfigurationSection("quarry-custom-output");
+    ConfigurationSection typeSection = inst().getConfig()
+        .getConfigurationSection("quarry-custom-output");
 
     if (typeSection == null) {
-      inst().log(Level.SEVERE, "Config section \"quarry-custom-output\" missing, Check your config and report this!");
+      inst().log(Level.SEVERE,
+          "Config section \"quarry-custom-output\" missing, Check your config and report this!");
       return null;
     }
 
@@ -272,27 +278,34 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
           chance = 100 - checkLimitChance;
         }
         final String itemId = itemConfig.getString("item");
+        if(itemId == null){
+          continue;
+        }
         if (itemConfig.getBoolean("is-slimefun")) {
           SlimefunItem slimefunItem = SlimefunItem.getById(itemId);
           //check Legacy Supreme
-          if(slimefunItem == null && getSupremeOptions().isUseLegacySupremeexpansionItemId()){
+          if (slimefunItem == null && getSupremeOptions().isUseLegacySupremeexpansionItemId()) {
             slimefunItem = SlimefunItem.getById(getOldIdSupremeLegacy(itemId));
           }
           if (slimefunItem != null) {
-            outputItems.add(AbstractQuarryOutputItem.builder().itemStack(slimefunItem.getItem().clone())
-                .chance(getSupremeOptions().isLimitProductionQuarry() ? (chance / 2) : chance).build());
+            outputItems.add(
+                AbstractQuarryOutputItem.builder().itemStack(slimefunItem.getItem().clone())
+                    .chance(getSupremeOptions().isLimitProductionQuarry() ? (chance / 2) : chance)
+                    .build());
           }
         } else {
           final Material material = Material.matchMaterial(itemId);
           if (material != null) {
             outputItems.add(AbstractQuarryOutputItem.builder().itemStack(new ItemStack(material, 1))
-                .chance(getSupremeOptions().isLimitProductionQuarry() ? (chance / 2) : chance).build());
+                .chance(getSupremeOptions().isLimitProductionQuarry() ? (chance / 2) : chance)
+                .build());
           }
         }
         checkLimitChance = checkLimitChance + chance;
       }
     } else {
-      inst().log(Level.SEVERE, "Config section for " + itemPath + " missing, Check your config and report this!");
+      inst().log(Level.SEVERE,
+          "Config section for " + itemPath + " missing, Check your config and report this!");
     }
 
     return AbstractQuarryOutput.builder().outputItems(outputItems).build();
@@ -319,7 +332,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
         && cfg.getBoolean("options.auto-update")
         && getDescription().getVersion().startsWith("Build")) {
       Supreme.inst().log(Level.INFO, "自动更新: 已启用");
-      new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "Supreme", "main", false, "zh-CN").start();
+      GuizhanBuildsUpdaterWrapper.start(this, getFile(), "SlimefunGuguProject", "Supreme", "main", false);
     } else {
       Supreme.inst().log(Level.INFO, "自动更新: 已禁用");
     }
@@ -360,7 +373,8 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     ConfigurationSection typeSection = this.getConfig().getConfigurationSection("supreme-enchant");
 
     if (typeSection == null) {
-      log(Level.SEVERE, "配置文件中 \"supreme-enchant\" 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
+      log(Level.SEVERE,
+          "配置文件中 \"supreme-enchant\" 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
       return;
     }
 
@@ -416,7 +430,8 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
           meta.addEnchant(entry.getKey(), entry.getValue(), true);
         }
       } else {
-        log(Level.SEVERE, "配置文件中 " + itemPath + " 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
+        log(Level.SEVERE,
+            "配置文件中 " + itemPath + " 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
       }
 
       // add meta
@@ -429,7 +444,8 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     ConfigurationSection typeSection = this.getConfig().getConfigurationSection("supreme-enchant");
 
     if (typeSection == null) {
-      log(Level.SEVERE, "配置文件中 \"supreme-enchant\" 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
+      log(Level.SEVERE,
+          "配置文件中 \"supreme-enchant\" 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
       return;
     }
 
@@ -461,7 +477,8 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
           meta.addEnchant(entry.getKey(), entry.getValue(), true);
         }
       } else {
-        log(Level.SEVERE, "配置文件中 " + itemPath + " 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
+        log(Level.SEVERE,
+            "配置文件中 " + itemPath + " 部分缺失, 请检查下载文件的完整性, 并汇报该问题!");
       }
 
       // add meta
