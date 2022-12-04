@@ -19,16 +19,28 @@
 
 ## 配置 (config.yml)
 
-- **use-legacy-supremeexpansion-item-id** - 使用至尊研究院1.0的物品ID
-- **enable-generators** - 是否开启发电机
-- **limit-production-generators** - 是否减少发电机5倍效率
-- **enable-quarry** - 是否开启矿机
-- **limit-production-quarry** - 是否限制矿机效率 (减少50%生产率)
+- **use-legacy-supremeexpansion-item-id** - 使用至尊研究院1.0的物品ID (默认: false)
+- **enable-generators** - 是否开启发电机 (默认: true)
+- **limit-production-generators** - 是否减少发电机5倍效率 (默认: false)
+- **enable-quarry** - 是否开启矿机 (默认: true)
+- **limit-production-quarry** - 是否限制矿机效率 (减少50%生产率) (默认: false)
+- **custom-ticker-delay** - 矿机生产的粘液刻延迟（类似货运的ticker-delay） (默认: 2)
+- **base-time-virtual-garden** - 虚拟花园的基础生产时间 (默认: 15)
+- **base-time-virtual-aquarium** - 虚拟水族馆的基础生产时间 (默认: 15)
+- **base-time-mob-collector** - 生物收集器的基础生产时间 (默认: 15)
+- **base-time-tech-generator** - 科技生成器的基础生产时间 (默认: 1800)
+- **tech-generator-max-amount** - 科技生成器的物品数量 (默认: 64)
+- **mob-tech-enable-bee** - 生物科技是否启用蜜蜂 (默认: true)
+- **mob-tech-enable-iron-golem** - 生物科技是否启用铁傀儡 (默认: true)
+- **mob-tech-enable-zombie** - 生物科技是否启用僵尸 (默认: true)
+- **quarry-custom-output** - 自定义矿机输出
 - **enable-weapons** - 是否启用武器
 - **enable-tools** - 是否启用工具
 - **enable-armor** - 是否启用护甲
 - **enable-tech** - 是否启用生物科技与卡片
 - **enable-item-converter-machine** - 是否启用物品转换器, 将旧版物品的ID转换为新版物品ID
+- **supreme-enchant** - 设置装备的附魔
+- **supreme-effects** - 设置护甲的药水效果
 
 ## 反馈 / 建议
 

@@ -8,6 +8,7 @@ import com.github.relativobr.supreme.machine.tech.TechMutation;
 import com.github.relativobr.supreme.machine.tech.TechRobotic;
 import com.github.relativobr.supreme.resource.SupremeComponents;
 import com.github.relativobr.supreme.util.ItemGroups;
+import com.github.relativobr.supreme.util.ItemUtil;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -19,6 +20,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import javax.annotation.Nonnull;
 import lombok.Getter;
 import lombok.Setter;
+import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
@@ -39,7 +41,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
   public static void preSetup(Supreme plugin, MobTechGeneric item) {
     if (MobTechType.SIMPLE == item.getMobTechType()) {
       MobTech mobTech = new MobTech(ItemGroups.COMPONENTS_CATEGORY,
-          Supreme.buildItemFromMobTechDTO(item, 0),
+          ItemUtil.buildItemFromMobTechDTO(item, 0),
           RecipeType.NULL,
           new ItemStack[]{MobCollectorTools.MOB_COLLECTOR_I});
       mobTech.setMobTechType(item.getMobTechType());
@@ -64,7 +66,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
   private static void buildRobotic(Supreme plugin, MobTechGeneric item) {
 
     MobTech mobTech = new MobTech(ItemGroups.TECHMOB_CATEGORY,
-        Supreme.buildItemFromMobTechDTO(item, 1),
+        ItemUtil.buildItemFromMobTechDTO(item, 1),
         RecipeType.ENHANCED_CRAFTING_TABLE,
         getRoboticStartRecipe(item));
     mobTech.setMobTechType(item.getMobTechType());
@@ -73,10 +75,10 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
 
     // upgrade tier
     for (int i = 2; i <= 9; i++) {
-      TechRobotic.addRecipe(Supreme.buildItemFromMobTechDTO(item, (i - 1)),
-          Supreme.buildItemFromMobTechDTO(item, i));
+      TechRobotic.addRecipe(ItemUtil.buildItemFromMobTechDTO(item, (i - 1)),
+          ItemUtil.buildItemFromMobTechDTO(item, i));
       mobTech = new MobTech(ItemGroups.TECHMOB_CATEGORY,
-          Supreme.buildItemFromMobTechDTO(item, i),
+          ItemUtil.buildItemFromMobTechDTO(item, i),
           RecipeType.NULL,
           new ItemStack[]{TechRobotic.TECH_ROBOTIC});
       mobTech.setMobTechType(item.getMobTechType());
@@ -87,7 +89,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
 
   private static ItemStack[] getRoboticStartRecipe(MobTechGeneric mobTech) {
     MobTechType mobTechType = mobTech.getMobTechType();
-    SlimefunItemStack itemStack = getItemStackMobTechSimple(mobTech);
+    ItemStack itemStack = getItemStackMobTechSimpleRobotic(mobTech);
     if (itemStack == null) {
       return null;
     }
@@ -116,14 +118,26 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     return null;
   }
 
-  private static SlimefunItemStack getItemStackMobTechSimple(MobTechGeneric mobTech) {
+  private static ItemStack getItemStackMobTechSimpleRobotic(MobTechGeneric mobTech) {
+    ItemStack itemStack = null;
+    if (mobTech.getId().contains("_BEE")) {
+      itemStack = new ItemStack(Material.HONEYCOMB);
+    } else if (mobTech.getId().contains("_GOLEM")) {
+      itemStack = new ItemStack(Material.POPPY);
+    } else if (mobTech.getId().contains("_ZOMBIE")) {
+      itemStack = new ItemStack(Material.ROTTEN_FLESH);
+    }
+    return itemStack;
+  }
+
+  private static SlimefunItemStack getItemStackMobTechSimpleMutation(MobTechGeneric mobTech) {
     SlimefunItemStack itemStack = null;
     if (mobTech.getId().contains("_BEE")) {
-      itemStack = Supreme.buildItemFromMobTechDTO(BeeTech.SIMPLE_BEE, 0);
+      itemStack = ItemUtil.buildItemFromMobTechDTO(BeeTech.SIMPLE_BEE, 0);
     } else if (mobTech.getId().contains("_GOLEM")) {
-      itemStack = Supreme.buildItemFromMobTechDTO(IronGolemTech.SIMPLE_GOLEM, 0);
+      itemStack = ItemUtil.buildItemFromMobTechDTO(IronGolemTech.SIMPLE_GOLEM, 0);
     } else if (mobTech.getId().contains("_ZOMBIE")) {
-      itemStack = Supreme.buildItemFromMobTechDTO(ZombieTech.SIMPLE_ZOMBIE, 0);
+      itemStack = ItemUtil.buildItemFromMobTechDTO(ZombieTech.SIMPLE_ZOMBIE, 0);
     }
     return itemStack;
   }
@@ -131,14 +145,14 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
   private static void buildMutation(Supreme plugin, MobTechGeneric item) {
 
     MobTech mobTech = new MobTech(ItemGroups.TECHMOB_CATEGORY,
-        Supreme.buildItemFromMobTechDTO(item, 1),
+        ItemUtil.buildItemFromMobTechDTO(item, 1),
         RecipeType.NULL,
         new ItemStack[]{TechMutation.TECH_MUTATION_I});
     mobTech.setMobTechType(item.getMobTechType());
     mobTech.setMobTechTier(1);
     mobTech.register(plugin);
 
-    SlimefunItemStack simpleInput = getItemStackMobTechSimple(item);
+    SlimefunItemStack simpleInput = getItemStackMobTechSimpleMutation(item);
     if (simpleInput == null) {
       return;
     }
@@ -147,12 +161,12 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     if (geneMutation != null) {
       TechMutation.addRecipeTechMutation(simpleInput, geneMutation,
           (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 25 : 20,
-          Supreme.buildItemFromMobTechDTO(item, 1));
+          ItemUtil.buildItemFromMobTechDTO(item, 1));
     }
 
     for (int i = 2; i <= 9; i++) {
-      final SlimefunItemStack inputTier = Supreme.buildItemFromMobTechDTO(item, (i - 1));
-      final SlimefunItemStack itemStack = Supreme.buildItemFromMobTechDTO(item, i);
+      final SlimefunItemStack inputTier = ItemUtil.buildItemFromMobTechDTO(item, (i - 1));
+      final SlimefunItemStack itemStack = ItemUtil.buildItemFromMobTechDTO(item, i);
       TechMutation.addRecipeTechMutation(inputTier, inputTier,
           (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 25 : 20, itemStack);
       mobTech = new MobTech(ItemGroups.TECHMOB_CATEGORY, itemStack, RecipeType.NULL,
