@@ -24,7 +24,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSection == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "Config section \"supreme-enchant\" missing, Check your config and report this!");
+                    "配置 \"supreme-enchant\" 缺失!");
             return;
         }
 
@@ -41,7 +41,7 @@ public class EnchantsAndEffectsUtil {
                 lore.add("");
             }
 
-            lore.add(ChatColor.AQUA + "Soulbound");
+            lore.add(ChatColor.AQUA + "灵魂绑定");
 
             // find path
             String itemPath = getNewIdSupremeLegacy(item.getItemId()).toLowerCase();
@@ -59,7 +59,7 @@ public class EnchantsAndEffectsUtil {
                 }
             } else {
                 Supreme.inst().log(Level.SEVERE,
-                        "Config section for " + itemPath + " missing, Check your config and report this!");
+                        "配置 " + itemPath + " 缺失!");
             }
 
             // add meta
@@ -73,7 +73,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSection == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "Config section \"supreme-enchant\" missing, Check your config and report this!");
+                    "配置 \"supreme-enchant\" 缺失!");
             return;
         }
 
@@ -90,7 +90,7 @@ public class EnchantsAndEffectsUtil {
                 lore.add("");
             }
 
-            lore.add(ChatColor.AQUA + "Soulbound");
+            lore.add(ChatColor.AQUA + "灵魂绑定");
 
             // find path
             String itemPath = getNewIdSupremeLegacy(item.getItemId()).toLowerCase();
@@ -106,7 +106,7 @@ public class EnchantsAndEffectsUtil {
                 }
             } else {
                 Supreme.inst().log(Level.SEVERE,
-                        "Config section for " + itemPath + " missing, Check your config and report this!");
+                        "配置 " + itemPath + " 缺失!");
             }
 
             // add meta
@@ -142,7 +142,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSectionEffects == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "Config section \"supreme-enchant\" missing, Check your config and report this!");
+                    "配置 \"supreme-enchant\" 缺失!");
             return effect;
         }
 
@@ -178,7 +178,7 @@ public class EnchantsAndEffectsUtil {
 
         if (typeSectionEffects == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "Config section \"supreme-enchant\" missing, Check your config and report this!");
+                    "配置 \"supreme-enchant\" 缺失!");
             return;
         }
 

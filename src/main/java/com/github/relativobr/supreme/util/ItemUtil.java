@@ -39,7 +39,7 @@ public class ItemUtil {
 
         if (typeSection == null) {
             Supreme.inst().log(Level.SEVERE,
-                    "Config section \"quarry-custom-output\" missing, Check your config and report this!");
+                    "配置 \"quarry-custom-output\" 缺失!");
             return null;
         }
 
@@ -87,7 +87,7 @@ public class ItemUtil {
             }
         } else {
             Supreme.inst().log(Level.SEVERE,
-                    "Config section for " + itemPath + " missing, Check your config and report this!");
+                    "配置 " + itemPath + " 缺失!");
         }
 
         return AbstractQuarryOutput.builder().outputItems(outputItems).build();
@@ -218,29 +218,29 @@ public class ItemUtil {
         switch (mobTechType) {
             case MUTATION_BERSERK:
             case ROBOTIC_ACCELERATION:
-                return ChatColor.GREEN + tierString + "x " + ChatColor.GRAY + "increase speed " +
-                        ChatColor.RED + tierString + "0%" + ChatColor.GRAY + " increase energy";
+                return ChatColor.GREEN + tierString + "倍 " + ChatColor.GRAY + " 速度" +
+                    ChatColor.GRAY + "增加" + ChatColor.RED + tierString + "0%" + ChatColor.GRAY + " 电力消耗";
             case MUTATION_LUCK:
             case ROBOTIC_CLONING:
                 return buildLoreTypeLuckAndCloning(tier);
             case MUTATION_INTELLIGENCE:
             case ROBOTIC_EFFICIENCY:
-                return ChatColor.GREEN + tierString + "0% " + ChatColor.GRAY + " decrease energy";
+                return ChatColor.GRAY + "减少" + ChatColor.GREEN + tierString + "0%" + ChatColor.GRAY + " 电力消耗";
             case SIMPLE:
             default:
-                return ChatColor.GRAY + "Increases processing speed";
+                return ChatColor.GRAY + "增加处理速度";
         }
     }
 
     private static String buildLoreTypeLuckAndCloning(Integer tier) {
         if (tier >= 9) {
-            return ChatColor.GREEN + "+4 stack" + ChatColor.GRAY + " clone";
+            return ChatColor.GREEN + "+4 物品组" + ChatColor.GRAY + "复制";
         } else if (tier >= 6) {
-            return ChatColor.GREEN + "+3 stack" + ChatColor.GRAY + " clone";
+            return ChatColor.GREEN + "+3 物品组" + ChatColor.GRAY + "复制";
         } else if (tier >= 4) {
-            return ChatColor.GREEN + "+2 stack" + ChatColor.GRAY + " clone";
+            return ChatColor.GREEN + "+2 物品组" + ChatColor.GRAY + "复制";
         } else {
-            return ChatColor.GREEN + "+1 stack" + ChatColor.GRAY + " clone";
+            return ChatColor.GREEN + "+1 物品组" + ChatColor.GRAY + "复制";
         }
     }
 
@@ -251,16 +251,16 @@ public class ItemUtil {
             case ROBOTIC_ACCELERATION:
             case MUTATION_INTELLIGENCE:
             case ROBOTIC_EFFICIENCY:
-                return ChatColor.GRAY + "Value process " + ChatColor.YELLOW
-                        + "(" + tierString + " * amount stack * 0.15625)";
+                return ChatColor.GRAY + "处理速度 " + ChatColor.YELLOW
+                        + "(" + tierString + " * 物品组数 * 0.15625)";
             case MUTATION_LUCK:
             case ROBOTIC_CLONING:
-                return ChatColor.GRAY + "Value process " + ChatColor.YELLOW
-                        + "(" + Supreme.getSupremeOptions().getMaxAmountTechGenerator() + "x per stack)";
+                return ChatColor.GRAY + "处理速度 " + ChatColor.YELLOW
+                        + "(" + Supreme.getSupremeOptions().getMaxAmountTechGenerator() + "x 每组)";
             case SIMPLE:
             default:
-                return ChatColor.GRAY + "Value process " + ChatColor.YELLOW
-                        + "(amount stack * 0.15625)";
+                return ChatColor.GRAY + "处理速度 " + ChatColor.YELLOW
+                        + "(物品组数 * 0.15625)";
         }
     }
 
@@ -271,6 +271,6 @@ public class ItemUtil {
                 buildNameTier(mobTechGeneric.getName(), tier), "",
                 buildLoreRadioactivityType(mobTechGeneric.getMobTechType()),
                 buildLoreType(mobTechGeneric.getMobTechType(), tier),
-                buildLoreTypeAmount(mobTechGeneric.getMobTechType(), tier), "", "&3Supreme Component");
+                buildLoreTypeAmount(mobTechGeneric.getMobTechType(), tier), "", "&3至尊组件");
     }
 }
