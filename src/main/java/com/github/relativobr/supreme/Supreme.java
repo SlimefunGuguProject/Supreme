@@ -37,7 +37,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
         supremeOptions = SupremeOptions.builder().autoUpdate(typeSection.getBoolean("auto-update"))
             .useLegacySupremeexpansionItemId(
                 typeSection.getBoolean("use-legacy-supremeexpansion-item-id", false))
-            .lang(typeSection.getString("lang", "en-US"))
+            .lang(typeSection.getString("lang", "zh-CN"))
             .customTickerDelay(typeSection.getInt("custom-ticker-delay"))
             .enableGenerators(typeSection.getBoolean("enable-generators", true))
             .limitProductionGenerators(typeSection.getBoolean("limit-production-generators", false))
