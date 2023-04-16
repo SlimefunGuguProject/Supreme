@@ -1,38 +1,43 @@
 package com.github.relativobr.supreme.util;
 
-import static com.github.relativobr.supreme.Supreme.getSupremeOptions;
-import static com.github.relativobr.supreme.util.CompatibilySupremeLegacy.getNewIdSupremeLegacy;
-import static com.github.relativobr.supreme.util.CompatibilySupremeLegacy.getOldIdSupremeLegacy;
-
 import com.github.relativobr.supreme.Supreme;
 import com.github.relativobr.supreme.machine.AbstractQuarry;
-import com.github.relativobr.supreme.machine.AbstractQuarryOutput;
 import com.github.relativobr.supreme.machine.AbstractQuarryOutputItem;
 import com.github.relativobr.supreme.machine.tech.MobTechGeneric;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.stream.Collectors;
-import javax.annotation.Nonnull;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
 
 import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.stream.Collectors;
+
+import static com.github.relativobr.supreme.Supreme.getSupremeOptions;
+import static com.github.relativobr.supreme.util.CompatibilySupremeLegacy.getNewIdSupremeLegacy;
+import static com.github.relativobr.supreme.util.CompatibilySupremeLegacy.getOldIdSupremeLegacy;
 
 public class ItemUtil {
 
 
     public static int getValueGeneratorsWithLimit(int value) {
-        return getSupremeOptions().isLimitProductionGenerators() ? (value / 5) : value;
+        return Math.min((getSupremeOptions().isLimitProductionGenerators() ? (value / 5) : value), 16000000);
     }
 
-    public static AbstractQuarryOutput getOutputQuarry(@Nonnull SlimefunItemStack item) {
+    public static SupremeQuarryOutput getOutputQuarry(@Nonnull SlimefunItemStack item) {
 
         ConfigurationSection typeSection = Supreme.inst().getConfig()
                 .getConfigurationSection("quarry-custom-output");
@@ -90,7 +95,7 @@ public class ItemUtil {
                     "配置 " + itemPath + " 缺失!");
         }
 
-        return AbstractQuarryOutput.builder().outputItems(outputItems).build();
+        return SupremeQuarryOutput.builder().outputItems(outputItems).build();
     }
 
     public static void addLoreQuarry(@Nonnull AbstractQuarry quarry) {
@@ -103,7 +108,7 @@ public class ItemUtil {
         if (meta.hasLore()) {
             lastElementLore = Optional.of(meta.getLore());
         }
-        final AbstractQuarryOutput output = quarry.getOutput();
+        final SupremeQuarryOutput output = quarry.getOutput();
         final List<AbstractQuarryOutputItem> outputItems = output.getOutputItems().stream().filter(Objects::nonNull)
                 .collect(Collectors.toList());
         for (AbstractQuarryOutputItem outputItem : outputItems) {
@@ -125,7 +130,7 @@ public class ItemUtil {
     }
 
 
-    public static ItemStack getItemQuarry(AbstractQuarryOutput output, int randomInt) {
+    public static ItemStack getItemQuarry(SupremeQuarryOutput output, int randomInt) {
         AtomicInteger startValue = new AtomicInteger(0);
         AtomicInteger nextValue = new AtomicInteger(0);
         ItemStack item = null;
@@ -264,13 +269,17 @@ public class ItemUtil {
         }
     }
 
-    public static SlimefunItemStack buildItemFromMobTechDTO(MobTechGeneric mobTechGeneric,
-                                                            Integer tier) {
-        return new SlimefunItemStack(buildIdTier(mobTechGeneric.getId(), tier),
+    public static SlimefunItemStack buildItemFromMobTechDTO(MobTechGeneric mobTechGeneric, Integer tier) {
+        SlimefunItemStack itemStack = new SlimefunItemStack(buildIdTier(mobTechGeneric.getId(), tier),
                 mobTechGeneric.getTexture(),
                 buildNameTier(mobTechGeneric.getName(), tier), "",
                 buildLoreRadioactivityType(mobTechGeneric.getMobTechType()),
                 buildLoreType(mobTechGeneric.getMobTechType(), tier),
                 buildLoreTypeAmount(mobTechGeneric.getMobTechType(), tier), "", "&3至尊组件");
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        PersistentDataAPI.setInt(itemMeta, new NamespacedKey(Supreme.inst(), "mob_tech_tier"), tier);
+        PersistentDataAPI.setString(itemMeta, new NamespacedKey(Supreme.inst(), "mob_tech_type"), mobTechGeneric.getMobTechType().name());
+        itemStack.setItemMeta(itemMeta);
+        return itemStack;
     }
 }
