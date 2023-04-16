@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-import net.guizhanss.guizhanlibplugin.updater.GuizhanBuildsUpdaterWrapper;
+import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -138,6 +138,13 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
 
     instance = this;
 
+    if (!getServer().getPluginManager().isPluginEnabled("GuizhanLibPlugin")) {
+      getLogger().log(Level.SEVERE, "本插件需要 鬼斩前置库插件(GuizhanLibPlugin) 才能运行!");
+      getLogger().log(Level.SEVERE, "从此处下载: https://50l.cc/gzlib");
+      getServer().getPluginManager().disablePlugin(this);
+      return;
+    }
+
     Supreme.inst().log(Level.INFO, "########################################");
     Supreme.inst().log(Level.INFO, "      Supreme 2.0  作者:RelativoBR       ");
     Supreme.inst().log(Level.INFO, "         汉化:SlimefunGuguProject        ");
@@ -154,7 +161,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
         && cfg.getBoolean("options.auto-update")
         && getDescription().getVersion().startsWith("Build")) {
       Supreme.inst().log(Level.INFO, "自动更新: 已启用");
-      GuizhanBuildsUpdaterWrapper.start(this, getFile(), "SlimefunGuguProject", "Supreme", "main", false);
+      GuizhanUpdater.start(this, getFile(), "SlimefunGuguProject", "Supreme", "main");
     } else {
       Supreme.inst().log(Level.INFO, "自动更新: 已禁用");
     }
