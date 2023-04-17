@@ -62,6 +62,33 @@ public class SimpleCard {
       "&b雪卡片", "", "&f改为生产雪", "",
       LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
 
+  public static final SlimefunItemStack CARD_APPLE = new SupremeItemStack("SUPREME_CARD_APPLE", Material.MUSIC_DISC_STRAD,
+      "&b苹果卡片", "", "&f改为生产苹果", "",
+      LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
+  
+  public static final SlimefunItemStack CARD_NETHER_STAR = new SupremeItemStack("SUPREME_CARD_NETHER_STAR", Material.MUSIC_DISC_STRAD,
+          "&b下界之星卡片", "", "&f改为生产下界之星", "",
+          LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
+
+  public static final SlimefunItemStack CARD_WITHER_ROSE = new SupremeItemStack("SUPREME_CARD_WITHER_ROSE", Material.MUSIC_DISC_STRAD,
+          "&b凋零玫瑰卡片", "", "&f改为生产凋零玫瑰", "",
+          LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
+
+  public static final SlimefunItemStack CARD_SLIME_BALL = new SupremeItemStack("SUPREME_CARD_SLIME_BALL", Material.MUSIC_DISC_STRAD,
+          "&b粘液球卡片", "", "&f改为生产粘液球", "",
+          LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
+
+  public static final SlimefunItemStack CARD_INK_SAC = new SupremeItemStack("SUPREME_CARD_INK_SAC", Material.MUSIC_DISC_STRAD,
+          "&b墨囊卡片", "", "&f改为生产墨囊", "",
+          LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
+
+  public static final SlimefunItemStack CARD_GLOW_INK_SAC = new SupremeItemStack("SUPREME_CARD_GLOW_INK_SAC", Material.MUSIC_DISC_STRAD,
+          "&b发光墨囊卡片", "", "&f改为生产发光墨囊", "",
+          LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
+
+  public static final SlimefunItemStack CARD_HONEY_BOTTLE = new SupremeItemStack("SUPREME_CARD_HONEY_BOTTLE", Material.MUSIC_DISC_STRAD,
+          "&b蜂蜜瓶卡片", "", "&f改为生产蜂蜜瓶", "",
+          LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
 
   public static final SlimefunItemStack CARD_COAL = new SupremeItemStack("SUPREME_CARD_COAL", Material.MUSIC_DISC_13,
       "&b煤卡片", "", "&f改为生产煤", "",

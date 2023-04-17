@@ -117,6 +117,10 @@ public class MobCollectorMachineRecipe extends MachineRecipe implements Predicat
     }
     displayRecipes.add(new CustomItemStack(Material.IRON_SWORD, null, "&f需要&b凋灵&f在附近"));
     displayRecipes.add(new ItemStack(Material.GLASS_BOTTLE));
+    if (!supremeOptions.isCustomBc()) {
+      displayRecipes.add(new CustomItemStack(Material.GOLD_INGOT, null, "&f需要&b猪灵&f在附近"));
+      displayRecipes.add(SlimefunItems.STRANGE_NETHER_GOO);
+    }
     return displayRecipes;
   }
 

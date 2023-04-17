@@ -1,8 +1,5 @@
 package com.github.relativobr.supreme.generators;
 
-import static com.github.relativobr.supreme.util.ItemUtil.getValueGeneratorsWithLimit;
-
-import com.github.relativobr.supreme.Supreme;
 import com.github.relativobr.supreme.resource.SupremeComponents;
 import com.github.relativobr.supreme.util.ItemGroups;
 import com.github.relativobr.supreme.util.SupremeItemStack;
@@ -11,13 +8,11 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.electric.AbstractEnergyProvider;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.blocks.BlockPosition;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
-import java.util.concurrent.Future;
-import java.util.function.Predicate;
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -27,6 +22,15 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.Sheep;
 import org.bukkit.inventory.ItemStack;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+
+import static com.github.relativobr.supreme.util.ItemUtil.getValueGeneratorsWithLimit;
 
 public class GeneratorMob extends AbstractEnergyProvider {
 
@@ -66,6 +70,7 @@ public class GeneratorMob extends AbstractEnergyProvider {
       SlimefunItems.CARBONADO, GeneratorMob.GENERATOR_MOB_MEDIUM, SlimefunItems.HEATING_COIL, SlimefunItems.PLUTONIUM,
       SlimefunItems.HEATING_COIL, GeneratorMob.GENERATOR_MOB_MEDIUM, SupremeComponents.INDUCTIVE_MACHINE,
       GeneratorMob.GENERATOR_MOB_MEDIUM};
+  protected static final Map<BlockPosition, UUID> cachedMob = new ConcurrentHashMap<>();
 
   private int energy;
   private int buffer;
@@ -73,24 +78,6 @@ public class GeneratorMob extends AbstractEnergyProvider {
 
   public GeneratorMob(SlimefunItemStack item, ItemStack[] recipe) {
     super(ItemGroups.ELECTRIC_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
-  }
-
-  @ParametersAreNonnullByDefault
-  private boolean isAnimalNearby(Location l) {
-    try {
-      Predicate<Entity> predicate = this::isValidAnimal;
-      Future<Boolean> task = Bukkit.getScheduler().callSyncMethod(Supreme.inst(),
-          () -> l.getWorld().getNearbyEntities(l, mobRange, mobRange, mobRange, predicate).isEmpty());
-      return !task.get();
-    } catch (Exception e) {
-      e.printStackTrace();
-      return false;
-    }
-  }
-
-  @ParametersAreNonnullByDefault
-  private boolean isValidAnimal(Entity n) {
-    return n instanceof Cow || n instanceof Sheep || n instanceof Pig;
   }
 
   public final GeneratorMob setEnergy(int value) {
@@ -120,15 +107,12 @@ public class GeneratorMob extends AbstractEnergyProvider {
   }
 
   @Override
-  protected void registerDefaultFuelTypes() {
-  }
+  protected void registerDefaultFuelTypes() {}
 
   @Override
+  @ParametersAreNonnullByDefault
   public int getGeneratedOutput(Location l, Config config) {
-    if (l != null) {
-      return isAnimalNearby(l) ? getEnergyProduction() : 0;
-    }
-    return 0;
+    return isAnimalNearby(l) ? getEnergyProduction() : 0;
   }
 
   @Override
@@ -144,5 +128,37 @@ public class GeneratorMob extends AbstractEnergyProvider {
   @Override
   public int[] getOutputSlots() {
     return new int[0];
+  }
+
+  @ParametersAreNonnullByDefault
+  private boolean isAnimalNearby(@Nonnull Location l) {
+    BlockPosition p = new BlockPosition(l);
+    updateSet(p, l);
+    return cachedMob.containsKey(p);
+  }
+
+  private boolean isAnimalNearby(@Nonnull Location l, @Nullable UUID uuid) {
+    return uuid != null && Bukkit.getEntity(uuid) != null && l.distanceSquared(Bukkit.getEntity(uuid).getLocation()) <= Math.pow(mobRange, 2);
+  }
+
+  @ParametersAreNonnullByDefault
+  private boolean isValidAnimal(Entity n) {
+    return n instanceof Cow || n instanceof Sheep || n instanceof Pig;
+  }
+
+  private UUID locateNearbyMob(@Nonnull Location l) {
+    return l.getWorld().getNearbyEntities(l, mobRange, mobRange, mobRange, this::isValidAnimal).stream().findFirst().map(Entity::getUniqueId).orElse(null);
+  }
+
+  @ParametersAreNonnullByDefault
+  private void updateSet(@Nonnull BlockPosition p, @Nonnull Location l) {
+    Slimefun.runSync(() -> {
+      UUID uuid = cachedMob.getOrDefault(p, locateNearbyMob(l));
+      if (isAnimalNearby(l, uuid)) {
+        cachedMob.put(p, uuid);
+      } else {
+        cachedMob.remove(p);
+      }
+    });
   }
 }
