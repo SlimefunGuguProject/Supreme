@@ -65,7 +65,7 @@ public class SimpleCard {
   public static final SlimefunItemStack CARD_APPLE = new SupremeItemStack("SUPREME_CARD_APPLE", Material.MUSIC_DISC_STRAD,
       "&b苹果卡片", "", "&f改为生产苹果", "",
       LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
-  
+
   public static final SlimefunItemStack CARD_NETHER_STAR = new SupremeItemStack("SUPREME_CARD_NETHER_STAR", Material.MUSIC_DISC_STRAD,
           "&b下界之星卡片", "", "&f改为生产下界之星", "",
           LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&3至尊合成材料");
@@ -137,6 +137,11 @@ public class SimpleCard {
   public static final SlimefunItemStack CARD_EMERALD = new SupremeItemStack("SUPREME_CARD_EMERALD",
       Material.MUSIC_DISC_FAR, "&b绿宝石卡片", "", "&f改为生产绿宝石", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3至尊合成材料");
+
+
+  public static final SlimefunItemStack CARD_BLAZE_ROD = new SupremeItemStack("SUPREME_CARD_BLAZE_ROD",
+      Material.MUSIC_DISC_FAR, "&b烈焰棒卡片", "", "&f改为生产烈焰棒", "",
+      LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&3Supreme Component");
 
 
   public static final SlimefunItemStack CARD_NETHERITE = new SupremeItemStack("SUPREME_CARD_NETHERITE",
