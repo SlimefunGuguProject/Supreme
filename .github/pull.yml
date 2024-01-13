@@ -1,11 +1,9 @@
 version: "1"
 rules:
   - base: main
-    upstream: RelativoBR:main
+    upstream: Slimefun-Addon-Community:main
     mergeMethod: merge
     assignees:
       - ybw0014
-      - LinYingLY
     conflictReviewers:
       - ybw0014
-      - LinYingLY

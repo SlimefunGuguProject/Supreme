@@ -157,9 +157,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
       return;
     }
 
-    if (getSupremeOptions().isAutoUpdate()
-        && cfg.getBoolean("options.auto-update")
-        && getDescription().getVersion().startsWith("Build")) {
+    if (getSupremeOptions().isAutoUpdate() && getDescription().getVersion().startsWith("Build")) {
       Supreme.inst().log(Level.INFO, "自动更新: 已启用");
       GuizhanUpdater.start(this, getFile(), "SlimefunGuguProject", "Supreme", "main");
     } else {
