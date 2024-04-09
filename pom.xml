@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-32</version>
+            <version>1aeb0e8</version>
             <scope>provided</scope>
         </dependency>
 
@@ -67,7 +67,7 @@
             <version>5.3.19</version>
         </dependency>
 
-        <!-- tradução -->
+      <!-- translation plugin -->
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLibPlugin</artifactId>
