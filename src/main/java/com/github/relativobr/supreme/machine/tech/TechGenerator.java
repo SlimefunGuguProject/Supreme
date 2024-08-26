@@ -104,11 +104,9 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
       ItemStack input1, ItemStack input2,
       ItemStack output) {
     new UnplaceableBlock(ItemGroups.CARDS_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE,
-        new ItemStack[]{new ItemStack(input1), new ItemStack(input2), new ItemStack(input1),
-            new ItemStack(input2),
-            getCardTier(tierCard), new ItemStack(input2), new ItemStack(input1),
-            new ItemStack(input2),
-            new ItemStack(input1)}).register(plugin);
+        new ItemStack[]{input1, input2, input1,
+            input2, getCardTier(tierCard), input2,
+            input1, input2, input1}).register(plugin);
     TechGenerator.addRecipesToProcess(item, output);
   }
 
