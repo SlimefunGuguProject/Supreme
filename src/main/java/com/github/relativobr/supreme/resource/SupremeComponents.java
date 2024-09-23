@@ -238,7 +238,7 @@ public class SupremeComponents {
   public static final SlimefunItemStack CRYSTALLIZER_MACHINE = new SupremeItemStack("SUPREME_CRYSTALLIZER_MACHINE",
       Material.TUBE_CORAL_BLOCK, "&a结晶零件", "", "&3高级至尊合成材料");
   public static final ItemStack[] RECIPE_CRYSTALLIZER_MACHINE = {SupremeCoreAlloy.RESOURCE_CORE_DIAMOND,
-      new ItemStack(STAINLESS_MACHINE), SupremeCoreAlloy.RESOURCE_CORE_DIAMOND, SupremeComponents.SYNTHETIC_RUBY,
+      STAINLESS_MACHINE, SupremeCoreAlloy.RESOURCE_CORE_DIAMOND, SupremeComponents.SYNTHETIC_RUBY,
       SupremeComponents.PETRIFIER_MACHINE, SupremeComponents.SYNTHETIC_RUBY, SupremeCoreAlloy.RESOURCE_CORE_EMERALD,
       SupremeComponents.INDUCTOR_MACHINE, SupremeCoreAlloy.RESOURCE_CORE_EMERALD};
 
