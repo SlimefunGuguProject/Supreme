@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.github.SlimefunGuguProject</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>14602eb009</version>
+            <version>2024.3.1</version>
             <scope>provided</scope>
         </dependency>
 
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLibPlugin</artifactId>
-            <version>1.7.0</version>
+            <version>1.8.1</version>
             <scope>provided</scope>
         </dependency>
 
