@@ -6,16 +6,7 @@
 
 ## 下载
 
-点击这里下载 Supreme: [下载 Supreme](https://builds.guizhanss.net/SlimefunGuguProject/Supreme/main)
-
-<p align="center">
-  <a href="https://github.com/SlimefunGuguProject/Supreme/actions/workflows/maven.yml">
-    <img src="https://github.com/SlimefunGuguProject/SupremeExpansion/actions/workflows/maven.yml/badge.svg" alt="Java CI"/>
-  </a>
-  <a href="https://builds.guizhanss.net/SlimefunGuguProject/Supreme/main">
-    <img src="https://builds.guizhanss.net/f/SlimefunGuguProject/Supreme/main/badge.svg" alt="Build status"/>
-  </a>
-</p>
+[下载 Supreme](https://resources.guizhanss.com/plugin/Supreme)
 
 ## 配置 (config.yml)
 
